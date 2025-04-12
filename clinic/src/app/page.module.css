@@ -1,4 +1,36 @@
-.page video {
+.homepage__top {
+    position: relative;
+}
+
+.homepage__top video {
     padding-bottom: 80px;
-    background-color: rgb(255, 104, 50);
+    background-color: rgba(72, 183, 196, 0.6);
+}
+
+.video_label {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+.video_label svg {
+    position: absolute;
+    fill: rgba(72, 183, 196, 0.6);
+    top: 100px;
+}
+
+.video_label p {
+    top: 260px;
+    position: absolute;
+    line-height: 2;
+    display: block;
+    font-size: 48px;
+    font-weight: bolder;
+    color: aliceblue;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
