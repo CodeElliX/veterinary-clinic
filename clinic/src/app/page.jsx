@@ -1,5 +1,6 @@
 import styles from './page.module.css';
 import AnimationTopText from './components/animation-text/page';
+import AboutUsHomepage from './components/about-us-homepage/page';
 
 export default function Home() {
 
@@ -30,6 +31,9 @@ export default function Home() {
           </svg>
         </div>
         <AnimationTopText />
+      </section>
+      <section className={styles.about_us}>
+        <AboutUsHomepage />
       </section>
       <p>Мы заботимся о здоровье ваших любимцев каждый день.
         От профилактических осмотров до сложных операций — наша команда профессионалов всегда рядом.
