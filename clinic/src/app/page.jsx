@@ -3,7 +3,7 @@ import AnimationTopText from './components/animation-text/page';
 import AboutUsHomepage from './components/about-us-homepage/page';
 import Services from './components/services/page';
 import Image from 'next/image';
-// import TbsDiagnostics from './components/tbs_diagnostics/page';
+import TbsDiagnostics from './components/tbs_diagnostics/page';
 
 export default function Home() {
 
@@ -56,7 +56,7 @@ export default function Home() {
         <Image src={'/paws.png'} width={400} height={100} />
       </section>
       <section className={styles.tbs_diagnostics}>
-        {/* <TbsDiagnostics /> */}
+        <TbsDiagnostics />
       </section>
     </div>
   );
