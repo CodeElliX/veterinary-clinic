@@ -90,4 +90,5 @@
 .description button:hover {
     cursor: pointer;
     transform: scale(1.1);
+    background-color: rgb(76, 63, 72);
 }

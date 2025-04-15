@@ -13,19 +13,19 @@ const AboutUsHomepage = () => {
     useEffect(() => {
         const fotoObserver = new IntersectionObserver(
             ([entry]) => {
-                if (entry.intersectionRatio >= 0.5) {
+                if (entry.intersectionRatio >= 0.3) {
                     setFotoVisible(true);
                 }
             },
-            { threshold: 0.5 }
+            { threshold: 0.3 }
         );
         const descObserver = new IntersectionObserver(
             ([entry]) => {
-                if (entry.intersectionRatio >= 0.6) {
+                if (entry.intersectionRatio >= 0.4) {
                     setDescVisible(true);
                 }
             },
-            { threshold: 0.6 }
+            { threshold: 0.4 }
         );
 
         if (fotoRef.current) fotoObserver.observe(fotoRef.current);

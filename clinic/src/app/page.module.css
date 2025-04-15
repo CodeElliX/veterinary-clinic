@@ -103,7 +103,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 4px solid rgb(76, 63, 72);
 }
 
 .services img {
@@ -121,4 +120,12 @@
     height: 90vh;
     width: 100%;
     padding: 10px 0;
+}
+
+.specialists {
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: 100%;
+    padding-bottom: 50px;
 }

@@ -4,6 +4,7 @@ import AboutUsHomepage from './components/about-us-homepage/page';
 import Services from './components/services/page';
 import Image from 'next/image';
 import TbsDiagnostics from './components/tbs_diagnostics/page';
+import Specialists from './components/specialists/page';
 
 export default function Home() {
 
@@ -57,6 +58,9 @@ export default function Home() {
       </section>
       <section className={styles.tbs_diagnostics}>
         <TbsDiagnostics />
+      </section>
+      <section className={styles.specialists}>
+        <Specialists/>
       </section>
     </div>
   );

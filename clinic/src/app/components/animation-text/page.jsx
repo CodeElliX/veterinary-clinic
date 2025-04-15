@@ -6,24 +6,34 @@ import { useEffect, useRef, useState } from "react";
 const AnimationTopText = () => {
 
     const spanRef = useRef(null);
+    const timeoutRef = useRef(null);
     const bottomText = "Цінуємо кожне життя";
     const [isVisible, setIsVisible] = useState(false);
+    const [animationKey, setAnimationKey] = useState(0);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.disconnect();
+                    clearTimeout(timeoutRef.current);
+                    timeoutRef.current = setTimeout(() => {
+                        setAnimationKey(prev => prev + 1);
+                        setIsVisible(true);
+                    }, 50);
+                } else {
+                    setIsVisible(false);
                 }
             },
-            { threshold: 1.0 }
+            { threshold: 0.5 }
         )
         if (spanRef.current) {
             observer.observe(spanRef.current);
         }
 
-        return () => observer.disconnect();
+        return () => {
+            clearTimeout(timeoutRef.current);
+            observer.disconnect();
+        };
 
     }, [])
 
@@ -38,12 +48,12 @@ const AnimationTopText = () => {
                 <path d="M111.59,308.8l.14-.05c11.93-4.79,21.16-14.29,26.69-27.48,8.38-20,7.2-46.75-3.15-71.65C120.94,175.16,92.85,152,65.38,152a46.4,46.4,0,0,0-17,3.2l-.14.05C36.34,160,27.11,169.54,21.58,182.73c-8.38,20-7.2,46.75,3.15,71.65C39.06,288.84,67.15,312,94.62,312A46.4,46.4,0,0,0,111.59,308.8Z" />
             </svg>
             {isVisible && (
-                <div>
+                <div key={animationKey}>
                     {bottomText.split("").map((char, i) => (
                         <span
                             key={i}
                             style={{
-                                animationDelay: `${i * 0.03}s`
+                                animationDelay: `${i * 0.04}s`
                             }}
                             className={styles.letters}
                         >
