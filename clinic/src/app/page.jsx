@@ -54,7 +54,7 @@ export default function Home() {
       </section>
       <section className={styles.services}>
         <Services />
-        <Image src={'/paws.png'} width={400} height={100} />
+        <Image src={'/paws.png'} width={400} height={100} alt='paws'/>
       </section>
       <section className={styles.tbs_diagnostics}>
         <TbsDiagnostics />

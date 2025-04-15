@@ -40,6 +40,10 @@ const Header = () => {
                         <p>(0482) 709-33-80</p>
                     </li>
                     <li>
+                        <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" className={styles.map_icon}>
+                            <rect />
+                            <path d="M128,16a88.1,88.1,0,0,0-88,88c0,75.3,80,132.2,83.4,134.6a8.3,8.3,0,0,0,9.2,0C136,236.2,216,179.3,216,104A88.1,88.1,0,0,0,128,16Zm0,56a32,32,0,1,1-32,32A32,32,0,0,1,128,72Z" />
+                        </svg>
                         <span>м.Одеса вул.Разумовська, 54</span>
                     </li>
                     <li>
@@ -67,9 +71,9 @@ const Header = () => {
             <div className={`${styles.header__bottom} ${bottomFixation ? styles.header__bottom_fixed : ""}`}>
                 <Image src='/vet_symbol.png' width={120} height={120} alt='logo' />
                 <ul>
-                    <Link href='/'><li>Головна</li></Link>
+                    <li><Link href='/'>Головна</Link></li>
                     <li>Ціни</li>
-                    <Link href='/contacts'><li>Контакти</li></Link>
+                    <li><Link href='/contacts'>Контакти</Link></li>
                     <li>Послуги</li>
                     <li>Лікарі</li>
                 </ul>
