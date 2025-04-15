@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import styles from './header.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
     const [bottomFixation, setBottomFixation] = useState(false);
@@ -66,9 +67,9 @@ const Header = () => {
             <div className={`${styles.header__bottom} ${bottomFixation ? styles.header__bottom_fixed : ""}`}>
                 <Image src='/vet_symbol.png' width={120} height={120} alt='logo' />
                 <ul>
-                    <li>Головна</li>
+                    <Link href='/'><li>Головна</li></Link>
                     <li>Ціни</li>
-                    <li>Контакти</li>
+                    <Link href='/contacts'><li>Контакти</li></Link>
                     <li>Послуги</li>
                     <li>Лікарі</li>
                 </ul>
