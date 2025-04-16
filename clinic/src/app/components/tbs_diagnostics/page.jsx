@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import styles from './tbs_diagnostics.module.css';
+import Link from 'next/link';
 
 const TbsDiagnostics = () => {
     return (
@@ -19,7 +20,7 @@ const TbsDiagnostics = () => {
                     а також тест Барлоу (кут повторного вивиху), що доповнюється рентгенографією
                     кульшових суглобів у різних проекціях.
                 </p>
-                <button>Детальніше</button>
+                <button><Link href='/diagnostics-tbs'>Детальніше</Link></button>
             </div>
         </>
     )
