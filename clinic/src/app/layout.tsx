@@ -3,9 +3,10 @@ import { Nunito } from "next/font/google";
 import './globals.css';
 import Header from './components/header/page';
 import Footer from './components/footer/page';
+import ScrollToUp from './components/scroll-up/page';
 
 
-const nunito = Nunito({subsets: ['latin']});
+const nunito = Nunito({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: "Центр Ветеринарної Медицини",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ScrollToUp />
       </body>
     </html>
   );
