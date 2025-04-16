@@ -24,11 +24,16 @@
 }
 
 .video_label p {
-    top: 260px;
-    position: absolute;
-    line-height: 2;
+    /* border: 1px solid; */
     display: block;
-    font-size: 48px;
+    align-self: center;
+    width: 400px;
+    top: 220px;
+    text-align: end;
+    position: absolute;
+    line-height: 1;
+    display: block;
+    font-size: 38px;
     font-weight: bolder;
     color: aliceblue;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
