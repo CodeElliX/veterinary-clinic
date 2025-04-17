@@ -46,6 +46,7 @@
     height: 100%;
     color: rgb(76, 63, 72);
     z-index: 1;
+    font-family: 'Nunito';
 }
 
 .description::before {
@@ -63,8 +64,10 @@
 
 
 .description h2 {
+    align-self: center;
     font-weight: 900;
     text-align: center;
+    width: 50%;
 }
 
 .description p {

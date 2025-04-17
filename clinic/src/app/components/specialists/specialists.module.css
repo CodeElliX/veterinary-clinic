@@ -9,11 +9,14 @@
     padding: 40px;
     font-size: 30px;
     font-weight: 900;
-    color: rgb(145, 212, 220);
+    /* color: rgb(145, 212, 220); */
+    color: rgb(29, 96, 103);
 }
 
 .letters {
     animation: fadeIn 0.2s ease-in forwards;
+    font-size: 42px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 @keyframes fadeIn {
@@ -73,9 +76,18 @@
 }
 
 .bottom_description h4 {
+    font-size: 18px;
     font-weight: 800;
     color: rgb(72, 183, 196);
+    font-family: 'Nunito';
 }
+
+.bottom_description p {
+    font-size: 20px;
+    line-height: 1;
+}
+
+
 
 .top_description {
     display: flex;
@@ -115,6 +127,7 @@
     gap: 10px;
     width: max-content;
     transition: transform 0.2s ease-in-out;
+    font-family: 'Nunito';
 }
 
 .next:hover {

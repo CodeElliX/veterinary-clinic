@@ -83,8 +83,9 @@
     border-radius: 2px;
     color: aliceblue;
     padding: 10px 20px;
-    font-size: 22px;
+    font-size: 28px;
     animation: pulse-border 1.5s infinite ease-in-out;
+    font-family: 'Marck Script';
 }
 
 @keyframes pulse-border {

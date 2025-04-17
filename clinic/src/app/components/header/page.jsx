@@ -69,7 +69,7 @@ const Header = () => {
                 </ul>
             </div>
             <div className={`${styles.header__bottom} ${bottomFixation ? styles.header__bottom_fixed : ""}`}>
-                <Image src='/vet_symbol.png' width={120} height={120} alt='logo' />
+                <Link href='/'><Image src='/vet_symbol.png' width={70} height={65} alt='logo' /></Link>
                 <ul>
                     <li><Link href='/'>Головна</Link></li>
                     <li>Ціни</li>
