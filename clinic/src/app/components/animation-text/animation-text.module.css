@@ -19,6 +19,7 @@
     color: aliceblue;
     opacity: 0;
     animation: fadeIn 0.2s ease-in forwards;
+    font-family: var(--font-marck), cursive;
 }
 
 

@@ -19,8 +19,6 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
-    font-family: 'Nunito';
-    font-size: 16px;
 }
 
 .header__top ul li {
@@ -29,6 +27,12 @@
     gap: 10px;
     color: rgb(255, 255, 255);
     text-align: center;
+    font-size: 16px;
+}
+
+.header__top p {
+    font-size: 26px;
+    font-family: var(--font-marck), cursive;
 }
 
 .telephone_icon {
@@ -80,7 +84,7 @@
 
 .header__bottom ul li {
     position: relative;
-    font-size: 32px;
+    font-size: 22px;
     list-style: none;
     transition: all 0.2s ease-in-out;
     background-color: rgb(255, 255, 255);

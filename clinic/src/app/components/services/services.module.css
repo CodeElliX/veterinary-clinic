@@ -6,7 +6,8 @@
 
 .description h2 {
     flex: 1;
-    font-family: 'Nunito';
+    font-family: var(--font-marck), cursive;
+    font-size: 30px;
 }
 
 .description p {
@@ -65,8 +66,7 @@
 .card h2 {
     padding: 10px 20px;
     color: rgb(62, 120, 182);
-    font-family: 'Nunito';
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .all_services_button {
