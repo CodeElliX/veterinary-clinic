@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './services.module.css';
 
 const Services = () => {
@@ -38,7 +39,7 @@ const Services = () => {
                     </div>
                 })}
             </div>
-            <button className={styles.all_services_button}>Переглянути усі послуги</button>
+           <Link href='/all-services' className={styles.all_services_btn}><button>Переглянути усі послуги</button></Link>
         </>
     )
 }

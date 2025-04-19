@@ -69,8 +69,11 @@
     font-size: 18px;
 }
 
-.all_services_button {
+.all_services_btn {
     z-index: 1;
+}
+
+.all_services_btn button {
     width: 230px;
     padding: 10px;
     font-size: 16px;
@@ -83,7 +86,7 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.all_services_button:hover {
+.all_services_btn button:hover {
     cursor: pointer;
     transform: scale(1.1);
     background-color: rgb(76, 63, 72);

@@ -72,9 +72,8 @@ const Header = () => {
                 <Link href='/'><Image src='/vet_symbol.png' width={70} height={65} alt='logo' /></Link>
                 <ul>
                     <li><Link href='/'>Головна</Link></li>
-                    <li>Ціни</li>
+                    <li><Link href='/all-services'>Послуги та Ціни</Link></li>
                     <li><Link href='/contacts'>Контакти</Link></li>
-                    <li>Послуги</li>
                     <li>Лікарі</li>
                 </ul>
             </div>
