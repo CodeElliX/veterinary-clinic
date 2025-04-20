@@ -1,11 +1,26 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './header.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Header = () => {
     const [bottomFixation, setBottomFixation] = useState(false);
+    const ulRef = useRef(null);
+
+    useEffect(() => {
+        const ulEl = ulRef.current;
+        const handleClick = (e) => {
+            const clickedLi = e.target.closest('li');
+            if (!clickedLi || !ulEl.contains(clickedLi)) return;
+            ulEl.querySelectorAll('li').forEach(li => li.classList.remove(styles.active));
+            clickedLi.classList.add(styles.active);
+        }
+        ulEl.addEventListener("click", handleClick);
+        return () => {
+            ulEl.removeEventListener('click', handleClick);
+        }
+    }, [])
 
     useEffect(() => {
         const handleScroll = () => {
@@ -70,7 +85,7 @@ const Header = () => {
             </div>
             <div className={`${styles.header__bottom} ${bottomFixation ? styles.header__bottom_fixed : ""}`}>
                 <Link href='/'><Image src='/vet_symbol.png' width={70} height={65} alt='logo' /></Link>
-                <ul>
+                <ul ref={ulRef}>
                     <li><Link href='/'>Головна</Link></li>
                     <li><Link href='/all-services'>Послуги та Ціни</Link></li>
                     <li><Link href='/contacts'>Контакти</Link></li>
