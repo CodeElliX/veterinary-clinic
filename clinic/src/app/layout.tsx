@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body className={`${marck.variable} ${nunito.variable}`}>
+      <body className={`${marck.variable} ${nunito.variable}`} suppressHydrationWarning={true}>
         <Header />
         {children}
         <Footer />
