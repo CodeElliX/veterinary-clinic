@@ -10,7 +10,7 @@ const Specialists = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [animationKey, setAnimationKey] = useState(0);
     const text = 'Наші спеціалісти:';
-    
+
     const allSpecialists = [
         { name: 'Ушаков Олег Степанович', speciality: 'Кандидат ветеринарних наук, хірург, головний лікар', photo: '/oleg_stepanovich.jpg' },
         { name: 'Ушаков Федір Олегович', speciality: 'Хірургія, ортопедія', photo: '/avatar.jpg' },

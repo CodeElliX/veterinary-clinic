@@ -3,15 +3,13 @@ import './globals.css';
 import Header from './components/header/page';
 import Footer from './components/footer/page';
 import ScrollToUp from './components/scroll-up/page';
-import { Marck_Script } from 'next/font/google';
-import { Nunito } from 'next/font/google';
+import { Marck_Script, Nunito } from 'next/font/google';
 
 const nunito = Nunito({
   subsets: ['latin', 'cyrillic'],
   weight: ['400', '700'],
   variable: '--font-nunito',
 });
-
 
 const marck = Marck_Script({
   subsets: ['latin', 'cyrillic'],

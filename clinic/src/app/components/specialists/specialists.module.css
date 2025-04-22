@@ -132,6 +132,7 @@
 
 .next:hover {
     cursor: pointer;
+    color: rgb(98, 43, 226);
 }
 
 .next:active {
