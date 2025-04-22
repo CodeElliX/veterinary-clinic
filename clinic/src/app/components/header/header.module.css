@@ -77,9 +77,9 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    color: rgb(76, 63, 72);
     text-shadow: 1px;
     font-weight: bolder;
+    color: rgb(19, 54, 58);
 }
 
 .header__bottom ul li {
@@ -119,5 +119,5 @@
 }
 
 .active {
-    color: aqua;
+    color: rgb(46, 124, 131);
 }

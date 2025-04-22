@@ -110,7 +110,7 @@
 }
 
 .top_description h4 {
-    color: rgb(76, 63, 72);
+    color: rgb(19, 54, 58);
     width: 50%;
     font-family: var(--font-marck), cursive;
     font-size: 26px;
@@ -133,6 +133,7 @@
 .next:hover {
     cursor: pointer;
     color: rgb(98, 43, 226);
+    fill: rgb(98, 43, 226);
 }
 
 .next:active {

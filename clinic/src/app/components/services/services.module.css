@@ -133,6 +133,7 @@
 .all_services_btn:hover {
     cursor: pointer;
     color: rgb(98, 43, 226);
+    fill: rgb(98, 43, 226);
 }
 
 .all_services_btn svg {

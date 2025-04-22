@@ -16,6 +16,8 @@
     text-decoration: underline;
     text-decoration-color: rgb(72, 183, 196);
     text-decoration-style: double;
+    font-family: var(--font-marck);
+    font-size: 38px;
 }
 
 .filials {
