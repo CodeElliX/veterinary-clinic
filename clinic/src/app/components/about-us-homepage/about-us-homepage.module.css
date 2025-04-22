@@ -18,27 +18,40 @@
 
 .description_section p {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba(255, 68, 0, 0.3);
+    color: rgb(19, 54, 58);
 }
 
 .description_section button {
-    padding: 10px;
-    background-color: #4D4D4D;
+    z-index: 2;
+    align-self: center;
+    width: max-content;
+    padding: 5px 15px;
+    background: linear-gradient(to right, rgb(76, 63, 72), white, rgb(76, 63, 72));
     border: none;
     border-radius: 4px;
-    color: aliceblue;
-    font-size: 16px;
+    color: rgb(19, 54, 58);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 24px;
     font-weight: 700;
-    transition: transform 0.2s ease-in-out;
-    z-index: 1;
+    font-family: var(--font-marck);
+    transition: all 0.2s ease-in-out;
+}
+
+.description_section h1::first-letter {
+    font-family: var(--font-marck), cursive;
+    font-size: 6rem;
+    font-weight: 100;
+    line-height: 0.2;
+    margin-right: -10px;
+    color: rgb(28, 78, 83);
 }
 
 .description_section button:hover {
     cursor: pointer;
     transform: scale(1.1);
-    background-color: rgb(76, 63, 72);
+    background: linear-gradient(to right, rgb(97, 80, 92), white, rgb(96, 80, 91));
 }
 
 .description_section img {
