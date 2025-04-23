@@ -89,7 +89,7 @@ const Header = () => {
                     <li><Link href='/'>Головна</Link></li>
                     <li><Link href='/all-services'>Послуги та Ціни</Link></li>
                     <li><Link href='/contacts'>Контакти</Link></li>
-                    <li>Лікарі</li>
+                    <li><Link href='/all-specialists'>Лікарі</Link></li>
                 </ul>
             </div>
         </>
