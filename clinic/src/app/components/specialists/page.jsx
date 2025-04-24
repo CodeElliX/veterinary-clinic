@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './specialists.module.css';
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import { specialists } from '../../data/specialistsData';
 
 const Specialists = () => {
 
@@ -11,18 +12,6 @@ const Specialists = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [animationKey, setAnimationKey] = useState(0);
     const text = 'Наші спеціалісти:';
-
-    const allSpecialists = [
-        { name: 'Ушаков Олег Степанович', speciality: 'Кандидат ветеринарних наук, хірург, головний лікар', photo: '/oleg_stepanovich.jpg' },
-        { name: 'Ушаков Федір Олегович', speciality: 'Хірургія, ортопедія', photo: '/avatar.jpg' },
-        { name: 'Бойко Наталія Анатолієвна', speciality: 'Терапія, дієтологія, акушерство, лабораторна діагностика', photo: '/nata.jpg' },
-        { name: 'Просвєтова Ірина', speciality: 'Лабораторна діагностика', photo: '/avatar.jpg' },
-        { name: 'Пірожук Владислав Ярославович', speciality: 'Кардіологія, пульмонологія', photo: '/hirurgiya.jpg' },
-        { name: 'Ожнакіна Ольга Володимирівна', speciality: 'Анестезіологія', photo: '/olga.jpg' },
-        { name: 'Пирожук Назар Ярославович', speciality: 'Хірургія, терапія, онкологія', photo: '/nazar.jpg' },
-        { name: 'Скрєблюков Сергій Сергійович', speciality: 'Терапія', photo: '/avatar.jpg' },
-        { name: 'Татарін Андрій Володимирович', speciality: 'Терапія', photo: '/avatar.jpg' },
-    ]
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -60,7 +49,7 @@ const Specialists = () => {
                 ))}
             </h2>
             <div className={styles.specialists}>
-                {allSpecialists.map((el, index) => {
+                {specialists.map((el, index) => {
                     return <div key={index} className={styles.card}>
                         <article className={styles.top_description}>
                             <h4>{el.name}</h4>
@@ -69,7 +58,7 @@ const Specialists = () => {
                         <Image src={el.photo} width={200} height={200} alt='doctor' />
                         <article className={styles.bottom_description}>
                             <h4>{el.name}</h4>
-                            <p>{el.speciality}</p>
+                            <p>{el.status}</p>
                         </article>
                     </div>
                 })}
