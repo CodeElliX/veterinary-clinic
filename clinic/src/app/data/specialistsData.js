@@ -12,9 +12,9 @@ export const specialists = [
 
 export const allSpecialists = [
     ...specialists,
-    { name: 'Катерина Євгеніївна', status: 'візуальна діагностика', speciality: 'абдомінальне ультразвукове дослідження', photo: '/hirurgiya.jpg' },
-    { name: 'Нікуліна Олена Олександрівна', status: 'лікар-інфекціоніст', speciality: 'ведення, догляд та реанімація стаціонарних пацієнтів', photo: '/avatar.jpg' },
-    { name: 'Резніченко Марьяна', status: 'інтенсивна терапія', speciality: 'ведення, догляд та реанімація стаціонарних пацієнтів', photo: '/avatar.jpg' },
+    { name: 'Цацуріна Катерина Євгеніївна', status: 'візуальна діагностика', speciality: 'абдомінальне ультразвукове дослідження', photo: '/avatar.jpg' },
+    { name: 'Нікуліна Олена Олександрівна', status: 'інфекціоніст', speciality: 'ведення, догляд та реанімація стаціонарних пацієнтів', photo: '/avatar.jpg' },
+    { name: 'Резніченко Марьяна Сергіївна', status: 'інтенсивна терапія', speciality: 'ведення, догляд та реанімація стаціонарних пацієнтів', photo: '/avatar.jpg' },
     { name: 'Войт Деніс Миколайович', status: 'рентгенолог', speciality: 'рентгенологія, інтенсивна терапія', photo: '/avatar.jpg' },
     { name: 'Даніїл', status: 'рентгенолог', speciality: 'рентгенологія', photo: '/avatar.jpg' },
     { name: 'Оксана', status: 'грумер', speciality: 'грумінг', photo: '/avatar.jpg' },

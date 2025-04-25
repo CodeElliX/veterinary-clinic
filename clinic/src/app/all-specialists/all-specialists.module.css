@@ -13,6 +13,11 @@
     font-family: var(--font-marck), cursive;
 }
 
+.animation {
+    background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
+    border-radius: 6px;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -27,7 +32,6 @@
 
 .head {
     display: inline-flex;
-    font-size: 14px;
     padding-bottom: 30px;
 }
 
@@ -42,6 +46,10 @@
 .head p {
     flex: 1;
     color: rgb(28, 78, 83);
+    font-size: 14px;
+    padding: 6px;
+    background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
+    border-radius: 6px;
 }
 
 .specialists {
@@ -158,6 +166,26 @@
     background-color: rgba(76, 63, 72, 0.6);
     border-radius: 4px;
     text-shadow: 0.5px 0.5px 0.5px black;
+}
+
+.arrow {
+    fill: rgba(76, 63, 72, 0.6);
+    animation: moveArrow 1.4s infinite ease-in-out;
+    transform-origin: left center;
+}
+
+@keyframes moveArrow {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 .banner p {
