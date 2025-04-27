@@ -9,10 +9,11 @@
 }
 
 .wrap img {
-    width: 100%;
+    width: 115%;
     height: 50vh;
     object-fit: cover;
     margin-bottom: 50px;
+    align-self: center;
 }
 
 .content {
@@ -43,15 +44,49 @@
 }
 
 .recomendation {
-    padding: 50px;
+    padding: 30px 50px;
     display: flex;
     flex-direction: column;
     border-radius: 6px;
-    background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
 }
 
 .recomendation h2 {
     text-align: center;
+    padding-bottom: 10px;
+}
+
+.recomendation ol {
+    margin: 0 auto;
+}
+
+.recomendation ol li {
+    margin-top: 10px;
+    margin-left: 50px;
+    padding-left: 20px;
+    list-style-type: "🐾";
+    list-style-position: inside;
+}
+
+.list {
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    list-style-position: inside;
+}
+
+.recomendation ul {
+    display: block;
+}
+
+.recomendation ul li {
+    padding: 0;
+    padding-left: 2px;
+    list-style-type: square;
+}
+
+.note {
+    border-left: 4px solid green;
+    border-radius: 4px;
+    padding-left: 20px;
 }
 
 .banner {
