@@ -19,8 +19,7 @@
 .content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 50px 100px;
+    padding: 0 50px;
 }
 
 .head {
@@ -39,58 +38,127 @@
     padding: 30px;
 }
 
-.content h3 {
-    align-self: first baseline;
+.recomendation {
+    display: inline-flex;
+    gap: 15px;
+    margin: 30px 0;
 }
 
-.recomendation {
-    padding: 30px 50px;
+.recomendation_head {
     display: flex;
     flex-direction: column;
-    border-radius: 6px;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 60px;
+    background-color: rgb(204, 231, 233);
+    height: 82vh;
+    border-radius: 40px;
 }
 
-.recomendation h2 {
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-.recomendation ol {
-    margin: 0 auto;
-}
-
-.recomendation ol li {
-    margin-top: 10px;
+.recomendation_head h3 {
     margin-left: 50px;
-    padding-left: 20px;
-    list-style-type: "🐾";
-    list-style-position: inside;
 }
 
-.list {
-    border-radius: 4px;
+.recomendation_all_lists {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: rgb(255, 255, 255);
-    list-style-position: inside;
+    height: 82vh;
+    padding: 20px;
+    padding-left: 70px;
+    border-radius: 40px;
 }
 
-.recomendation ul {
-    display: block;
+.recomendation_all_lists b {
+    margin-left: -20px;
 }
 
-.recomendation ul li {
-    padding: 0;
-    padding-left: 2px;
-    list-style-type: square;
+.recomendation_all_lists svg {
+    background-color: rgb(204, 231, 233);
+    border-radius: 50%;
+    min-width: 20px;
+    min-height: 20px;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+.recomendation_all_lists li {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 4px;
+    list-style: none;
 }
 
 .note {
-    border-left: 4px solid green;
-    border-radius: 4px;
-    padding-left: 20px;
+    background-color: rgb(96, 131, 134);
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    border-left: 6px solid green;
+    margin-bottom: 30px;
+}
+
+.procedure {
+    padding: 50px 0;
+    border-bottom: 4px solid green;
+}
+
+.procedure h2 {
+    margin-bottom: 30px;
+    border-bottom: 4px solid green;
+    width: fit-content;
+}
+
+.procedure__items {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.procedure__items li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    height: 50vh;
+    border-radius: 40px;
+    list-style: none;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.procedure__items li:nth-child(even) {
+    background-color: rgb(204, 231, 233);
+}
+
+.procedure__items li:nth-child(odd) {
+    background-color: rgb(255, 255, 255);
+}
+
+.procedure__items span {
+    text-align: center;
+    line-height: 2;
+    margin-left: 20px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+}
+
+.procedure__items li:nth-of-type(odd) span {
+    background-color: rgb(204, 231, 233);
+}
+
+.procedure__items li:nth-of-type(even) span {
+    background-color: rgb(255, 255, 255);
 }
 
 .banner {
-    background: linear-gradient(to right, white, rgba(76, 63, 72), white, rgba(76, 63, 72), white, rgba(76, 63, 72), white, rgba(76, 63, 72), white);
+    background: linear-gradient(to right, white, rgb(28, 78, 83), white, rgb(28, 78, 83), white, rgb(28, 78, 83), white, rgb(28, 78, 83), white);
     height: 30vh;
     display: inline-flex;
     justify-content: space-around;
@@ -104,7 +172,7 @@
 }
 
 .banner p {
-    background-color: rgba(76, 63, 72, 0.6);
+    background-color: rgba(28, 78, 83, 0.6);
     width: 50%;
     padding: 6px;
     font-size: 20px;

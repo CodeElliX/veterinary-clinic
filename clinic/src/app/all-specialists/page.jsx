@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useRef, useState, useEffect } from 'react';
 
 const AllSpecialists = () => {
+    
     const headerRef = useRef(null);
     const timeoutRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
