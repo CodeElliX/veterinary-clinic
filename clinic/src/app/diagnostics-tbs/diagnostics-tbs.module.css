@@ -25,6 +25,7 @@
 .head {
     display: flex;
     flex-direction: column;
+    border-bottom: 4px solid green;
 }
 
 .head h1 {
@@ -36,6 +37,27 @@
 
 .head p {
     padding: 30px;
+}
+
+.head__bottom {
+    margin-bottom: 40px;
+}
+
+.head__bottom ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.head__bottom li {
+    list-style-type: "✅ ";
+    list-style-position: inside;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.head__bottom h3 {
+    width: max-content;
+    margin-bottom: 30px;
+    border-bottom: 2px solid green;
 }
 
 .recomendation {
@@ -181,42 +203,49 @@
 }
 
 .expertise {
+    display: flex;
     margin: 50px 0;
 }
 
-.expertise__top {
-    display: flex;
-}
-
-.expertise__top img {
+.expertise img {
     border-radius: 40px;
-}
+    width: 50%;
+    align-self: flex-start;
 
-.expertise__top svg {
-    width: 70px;
-    height: 100px;
 }
 
 .description {
+    width: 50%;
+    position: relative;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    margin: 0 4%;
+}
+
+.description p {
+    padding: 30px 20px 60px 20px;
     border-radius: 40px;
-    height: 200px;
-    padding: 40px;
 }
 
 .expertise__head {
     display: flex;
-    text-align: center;
+    box-sizing: border-box;
 }
 
 .expertise__head h2 {
+    text-align: end;
+    padding-top: 40px;
     width: 50%;
+    margin-left: 10%;
 }
 
 .expertise__head svg {
-    padding: 0;
-    margin: 0;
+    position: absolute;
+    right: 20%;
+    top: 15%;
+    height: 100px;
+    width: 100px;
 }
 
 .banner {
