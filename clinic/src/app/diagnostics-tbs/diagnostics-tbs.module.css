@@ -204,7 +204,7 @@
 
 .expertise {
     display: flex;
-    margin: 50px 0;
+    margin: 50px 0 20px 0;
 }
 
 .expertise img {
@@ -224,8 +224,11 @@
 }
 
 .description p {
-    padding: 30px 20px 60px 20px;
+    text-align: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    padding: 10px;
     border-radius: 40px;
+    margin-top: 30px;
 }
 
 .expertise__head {
@@ -246,6 +249,35 @@
     top: 15%;
     height: 100px;
     width: 100px;
+}
+
+.process {
+    margin: 50px;
+}
+
+.process h2 {
+    border-bottom: 4px solid green;
+    width: max-content;
+    margin-bottom: 30px;
+}
+
+.process__list {
+    list-style: none;
+    font-weight: 600;
+}
+
+.process__list li {
+    padding: 10px 0 10px 2%;
+    list-style-type: "✧  ";
+    list-style-position: inside;
+}
+
+.process__list li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.process__list li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
 }
 
 .banner {
