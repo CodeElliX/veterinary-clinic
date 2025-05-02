@@ -2,12 +2,9 @@ export const specialists = [
     { name: 'Ушаков Олег Степанович', status: 'xірург, ортопед', speciality: 'Кандидат ветеринарних наук, хірург, ортопед, головний лікар', photo: '/oleg_stepanovich.jpg' },
     { name: 'Ушаков Федір Олегович', status: 'xірург, ортопед', speciality: 'хірургія, ортопедія', photo: '/avatar.jpg' },
     { name: 'Бойко Наталія Анатолієвна', status: 'лабораторна діагностика, терапія', speciality: 'терапія, дієтологія, дерматологія, акушерство, лабораторна діагностика', photo: '/nata.jpg' },
-    { name: 'Просвєтова Ірина', status: 'лабораторна діагностика', speciality: 'лабораторна діагностика', photo: '/avatar.jpg' },
     { name: 'Пірожук Владислав Ярославович', status: 'кардіолог, пульмонолог', speciality: 'кардіологія, пульмонологія, ведення і реанімація важких пацієнтів', photo: '/hirurgiya.jpg' },
     { name: 'Ожнакіна Ольга Володимирівна', status: 'анестезіолог', speciality: 'анестезіологія, реанімація та інтенсивна терапія', photo: '/olga.jpg' },
     { name: 'Пирожук Назар Ярославович', status: 'хірург, терапевт', speciality: 'хірургія, терапія, онкологія, анестезіологія', photo: '/nazar.jpg' },
-    { name: 'Скрєблюков Сергій Сергійович', status: 'терапевт', speciality: 'терапія, реанімація, супровод пацієнтів на МРТ та КТ', photo: '/avatar.jpg' },
-    { name: 'Татарін Андрій Володимирович', status: 'терапевт', speciality: 'терапія, реанімація', photo: '/avatar.jpg' },
 ]
 
 export const allSpecialists = [
@@ -18,4 +15,7 @@ export const allSpecialists = [
     { name: 'Войт Деніс Миколайович', status: 'рентгенолог', speciality: 'рентгенологія, інтенсивна терапія', photo: '/avatar.jpg' },
     { name: 'Даніїл', status: 'рентгенолог', speciality: 'рентгенологія', photo: '/avatar.jpg' },
     { name: 'Оксана', status: 'грумер', speciality: 'грумінг', photo: '/avatar.jpg' },
+    { name: 'Скрєблюков Сергій Сергійович', status: 'терапевт', speciality: 'терапія, реанімація, супровод пацієнтів на МРТ та КТ', photo: '/avatar.jpg' },
+    { name: 'Татарін Андрій Володимирович', status: 'терапевт', speciality: 'терапія, реанімація', photo: '/avatar.jpg' },
+    { name: 'Просвєтова Ірина', status: 'лабораторна діагностика', speciality: 'лабораторна діагностика', photo: '/avatar.jpg' },
 ];
