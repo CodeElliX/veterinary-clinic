@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import styles from './about-us-homepage.module.css';
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 const AboutUsHomepage = () => {
@@ -71,7 +72,7 @@ const AboutUsHomepage = () => {
                     обладнана всім необхідним спорудженням для швидкого і якісного обслуговування нашіх пацієнтів. Ми маємо сучасний цифровий рентген,
                     УЗІ-кабінет для абдомінального і кардіологічного обстеження, свою лабораторію, хірургічне відділення, а також інфекційний та післяопераційний стаціонари.
                 </p>
-                <button>Дізнатися більше</button>
+                <Link href='/'><span className={styles.btn}>Дізнатися більше</span></Link>
                 <Image src='/vet_symbols.png' alt='terapiya' width={500} height={500} />
             </div>
         </>

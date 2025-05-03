@@ -24,22 +24,6 @@
     color: rgb(19, 54, 58);
 }
 
-.description_section button {
-    z-index: 2;
-    align-self: center;
-    width: max-content;
-    padding: 5px 15px;
-    background: linear-gradient(to right, rgba(28, 78, 83, 0.8), white, rgba(28, 78, 83, 0.8));
-    border: none;
-    border-radius: 4px;
-    color: rgb(19, 54, 58);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    font-size: 24px;
-    font-weight: 700;
-    font-family: var(--font-marck);
-    transition: all 0.2s ease-in-out;
-}
-
 .description_section h1::first-letter {
     font-family: var(--font-marck), cursive;
     font-size: 6rem;
@@ -49,16 +33,36 @@
     color: rgb(28, 78, 83);
 }
 
-.description_section button:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    background: linear-gradient(to right, rgba(28, 78, 83, 0.6), white, rgba(28, 78, 83, 0.6));
-}
-
 .description_section img {
+    z-index: 1;
     fill: aliceblue;
     position: absolute;
     opacity: 0.1;
+}
+
+.description_section a {
+    z-index: 2;
+}
+
+.description_section .btn {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    padding: 5px 20px;
+    background-color: rgba(28, 78, 83, 0.8);
+    border: none;
+    border-radius: 4px;
+    color: rgb(240, 248, 255);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-size: 24px;
+    font-weight: 400;
+    font-family: var(--font-marck);
+    transition: all 0.3s ease-in-out;
+}
+
+.description_section .btn:hover {
+    cursor: pointer;
+    background-color: rgba(28, 78, 83, 0.6);
 }
 
 .foto_section {

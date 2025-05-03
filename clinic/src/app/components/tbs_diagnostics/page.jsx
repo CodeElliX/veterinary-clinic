@@ -20,7 +20,7 @@ const TbsDiagnostics = () => {
                     а також тест Барлоу (кут повторного вивиху), що доповнюється рентгенографією
                     кульшових суглобів у різних проекціях.
                 </p>
-                <Link href='/diagnostics-tbs'><button>Детальніше</button></Link>
+                <Link href='/diagnostics-tbs'><span className={styles.btn}>Детальніше</span></Link>
             </div>
         </>
     )

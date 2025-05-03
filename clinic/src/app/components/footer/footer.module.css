@@ -8,6 +8,7 @@
     margin-bottom: 5px;
     overflow: hidden;
     color: rgb(240, 248, 255);
+    border-top: 20px solid rgb(96, 131, 134);
 }
 
 .footer__wrap::after {
@@ -46,13 +47,33 @@
 
 .footer__contacts ul li {
     padding-top: 2%;
+    list-style: none;
+    text-wrap: nowrap;
+    display: flex;
+    gap: 3%;
+    fill: rgb(145, 212, 220);
 }
 
 .footer__navigation {
     z-index: 2;
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 26%;
+    left: 27%;
+}
+
+.footer__navigation ul li {
+    text-align: center;
+}
+
+.footer__navigation ul a li,
+.footer__articles ul a li {
+    list-style: none;
+    transition: all 0.1s ease-in-out;
+}
+
+.footer__navigation ul a:hover li,
+.footer__articles ul a:hover li {
+    color: rgb(62, 120, 182);
 }
 
 .footer__articles {
