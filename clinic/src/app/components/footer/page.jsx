@@ -87,7 +87,7 @@ const Footer = () => {
             </article>
             <div className={styles.footer__bottom}>
                 <p>Центр Ветеринарної Медицина на Разумовській © 2025</p>
-                <p>Made with ❤ by <Link href='codeellix@gmail.com'>AneleW</Link></p>
+                <p>Made with ❤ by <a href="mailto:codeellix@gmail.com">AneleW</a></p>
             </div>
         </div>
     )

@@ -104,10 +104,12 @@
     fill: rgb(255, 255, 255);
     width: 30px;
     height: 30px;
+    transition: all 0.2s ease-in-out;
 }
 
 .social_icon:hover {
     cursor: pointer;
+    fill: rgb(62, 120, 182);
 }
 
 .footer__bottom {

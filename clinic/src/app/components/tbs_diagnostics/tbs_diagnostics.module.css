@@ -1,3 +1,10 @@
+.wrap {
+    display: flex;
+    padding: 50px 0;
+    border-top: 10px solid rgb(96, 131, 134);
+    border-bottom: 10px solid rgb(96, 131, 134);
+}
+
 .photo {
     display: flex;
     justify-content: center;

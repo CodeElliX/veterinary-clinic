@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const TbsDiagnostics = () => {
     return (
-        <>
+        <div className={styles.wrap}>
             <div className={styles.photo}>
                 <Image src={'/d_tbs.jpg'} alt='tbs-pathology' width={200} height={200} className={styles.pathology} />
                 <Image src={'/normal_tbs.jpg'} alt='tbs_normal' width={200} height={200} className={styles.normal} />
@@ -22,7 +22,7 @@ const TbsDiagnostics = () => {
                 </p>
                 <Link href='/diagnostics-tbs'><span className={styles.btn}>Детальніше</span></Link>
             </div>
-        </>
+        </div>
     )
 }
 
