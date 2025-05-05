@@ -1,3 +1,7 @@
+.wrap {
+    background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
+}
+
 .wrap img {
     width: 100%;
     height: 50vh;
@@ -6,4 +10,137 @@
 
 .content {
     padding: 5%;
+}
+
+.head {
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.head h1 {
+    text-align: center;
+}
+
+.head p {
+    width: 80%;
+    align-self: center;
+}
+
+.procedure {
+    padding: 5% 0;
+    border-bottom: 4px solid green;
+}
+
+.procedure h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+    margin-bottom: 1%;
+}
+
+.procedure__content {
+    display: flex;
+    gap: 20px;
+}
+
+.procedure__content article {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+}
+
+.procedure article {
+    padding-top: 2%;
+}
+
+.procedure span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(204, 231, 233);
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.why_we {
+    padding: 5% 0 5% 0;
+    border-bottom: 4px solid green;
+}
+
+.why_we h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+}
+
+.why_we ul {
+    margin-top: 2%;
+    display: flex;
+}
+
+.why_we ul li {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    padding: 2%;
+}
+
+.why_we ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.why_we ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.banner {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 1%;
+    margin: 2% 0;
+    border-radius: 4px;
+    font-family: var(--font-marck), cursive;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5% 5% 3% 5%;
+}
+
+.prices h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+}
+
+.prices ul {
+    width: 50%;
+}
+
+.prices ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    list-style: none;
+    padding-left: 2%;
+    width: 100%;
+}
+
+.prices ul li span {
+    padding-right: 2%;
+}
+
+.prices ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.prices ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
 }
