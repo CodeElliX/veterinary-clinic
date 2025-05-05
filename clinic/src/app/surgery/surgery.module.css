@@ -1,7 +1,7 @@
 .wrap {
-    padding: 5%;
     color: rgb(28, 78, 83);
     background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
+    margin-bottom: 0;
 }
 
 .wrap__img {
@@ -19,7 +19,12 @@
     gap: 20px;
 }
 
+.introduction p {
+    width: 70%;
+}
+
 .directions {
+    padding: 2%;
     display: flex;
     flex-direction: column;
     border-bottom: 4px solid green;
@@ -69,8 +74,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
-    border-bottom: 4px solid green;
+    padding: 3% 1%;
 }
 
 .anesthesiology__description {
@@ -104,11 +108,96 @@
 }
 
 .postoperative {
+    display: flex;
+    text-align: center;
+    background-color: rgb(96, 131, 134);
+    border-radius: 4px;
     padding: 50px 0;
-    border-bottom: 4px solid green;
+    color: aliceblue;
+    border-left: 10px solid green;
 }
 
 .postoperative h2 {
+    flex: 1;
+    text-decoration: underline;
+    text-decoration-line: overline;
+    line-height: 4;
+}
+
+.postoperative p {
+    flex: 1;
+    padding: 0 1%;
+    width: fit-content;
+    border-bottom: 2px solid white;
+}
+
+.why_we {
+    padding: 5%;
+}
+
+.why_we h2 {
+    border-bottom: 4px solid green;
+    width: max-content;
+}
+
+.why_we ul {
+    display: flex;
+    padding: 5% 0 0 0;
+}
+
+.why_we ul li {
+    flex: 1;
+    list-style-type: "✅  ";
+    list-style-position: inside;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.banner {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 1%;
+    margin: 2% 0;
+    border-radius: 4px;
+    font-family: var(--font-marck), cursive;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 2% 5% 3% 5%;
+}
+
+.prices h3 {
     width: max-content;
     border-bottom: 4px solid green;
+}
+
+.prices ul {
+    width: 50%;
+}
+
+.prices ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    list-style: none;
+    padding-left: 2%;
+    width: 100%;
+}
+
+.prices ul li span {
+    padding-right: 2%;
+}
+
+.prices ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.prices ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
 }
