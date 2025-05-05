@@ -168,7 +168,8 @@
 }
 
 .arrow {
-    fill: rgba(28, 78, 83, 0.6);
+    fill: white;
+    stroke: rgb(28, 78, 83);
     animation: moveArrow 1.4s infinite ease-in-out;
     transform-origin: left center;
 }
