@@ -1,8 +1,10 @@
+import Image from 'next/image';
 import styles from './surgery.module.css';
 
 const Surgery = () => {
     return (
         <div className={styles.wrap}>
+            <Image src={'/surgery.jpg'} width={500} height={500} alt='surgery' className={styles.wrap__img} />
             <article className={styles.introduction}>
                 <h1>Хірургічні маніпуляції</h1>
                 <p>
@@ -66,16 +68,19 @@ const Surgery = () => {
                     </div>
                 </div>
             </article>
-            <article>
-                <h2>Анестезія та контроль стану</h2>
-                <p>
-                    Кожна хірургічна процедура проводиться під ретельно підібраною седацією
-                    або загальним наркозом. Для безпеки пацієнта ми використовуємо моніторинг
-                    основних життєвих показників (ЧСС, дихання, насичення киснем), анестезіолог
-                    контролює стан тварини протягом усієї операції.
-                </p>
+            <article className={styles.anesthesiology}>
+                <div className={styles.anesthesiology__description}>
+                    <h2>Анестезія та контроль стану</h2>
+                    <p>
+                        Кожна хірургічна процедура проводиться під ретельно підібраною седацією
+                        або загальним наркозом. Для безпеки пацієнта ми використовуємо моніторинг
+                        основних життєвих показників (ЧСС, дихання, насичення киснем), анестезіолог
+                        контролює стан тварини протягом усієї операції.
+                    </p>
+                </div>
+                <Image src={'/surgery2.jpg'} width={500} height={500} alt='technology' />
             </article>
-            <article>
+            <article className={styles.postoperative}>
                 <h2>Післяопераційна підтримка</h2>
                 <p>
                     Після завершення маніпуляції тварина переводиться до післяопераційного стаціонару.
