@@ -1,0 +1,213 @@
+.wrap {
+    color: rgb(28, 78, 83);
+    background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
+}
+
+.wrap img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.content {
+    padding: 5% 3%;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 5%;
+}
+
+.head h1 {
+    align-self: center;
+    text-align: center;
+    width: 70%;
+}
+
+.head p {
+    align-self: center;
+    text-align: center;
+    width: 80%;
+}
+
+.needlessness {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    background-color: rgb(96, 131, 134);
+    color: white;
+    border-left: 10px solid green;
+}
+
+.needlessness h2 {
+    flex: 1;
+    width: max-content;
+    text-decoration: overline;
+}
+
+.needlessness p {
+    margin-left: 2%;
+    padding-bottom: 1%;
+    flex: 2;
+    border-bottom: 2px solid white;
+}
+
+.postoperative {
+    padding: 5% 0;
+    border-bottom: 4px solid green;
+}
+
+.postoperative h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+}
+
+.postoperative p {
+    padding: 2%;
+    font-weight: 600;
+}
+
+.postoperative ul {
+    display: flex;
+}
+
+.postoperative ul li {
+    list-style-type: "✅  ";
+    list-style-position: inside;
+    flex: 1;
+}
+
+.postoperative ul li:not(:last-child) {
+    margin-right: 1%;
+}
+
+.infectious {
+    padding: 5% 0;
+}
+
+.infectious h2 {
+    width: max-content;
+    align-self: first baseline;
+    border-bottom: 4px solid green;
+}
+
+.infectious p {
+    padding: 3%;
+    font-weight: 600;
+    width: 70%;
+}
+
+.infectious__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.infectious ul {
+    padding: 2%;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.infectious ul li {
+    list-style-type: "✅  ";
+    list-style-position: inside;
+}
+
+.comfort h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+}
+
+.comfort p {
+    padding: 1%;
+    font-weight: 600;
+}
+
+.comfort ul {
+    display: flex;
+    text-align: center;
+}
+
+.comfort ul li {
+    flex: 1;
+    list-style: "🔹 ";
+    list-style-position: inside;
+    padding: 2%;
+}
+
+.comfort ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.comfort ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.schedule {
+    padding: 3%;
+}
+
+.schedule h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+}
+
+.schedule span {
+    display: inline-block;
+    color: rgb(62, 120, 182);
+    font-weight: 600;
+    padding: 1%;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 3% 0;
+}
+
+.prices h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+}
+
+.prices ul {
+    width: 50%;
+}
+
+.prices ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    list-style: none;
+    padding-left: 2%;
+    width: 100%;
+}
+
+.prices ul li span {
+    padding-right: 2%;
+}
+
+.prices ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.prices ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.banner {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 1%;
+    margin: 2% 0;
+    border-radius: 4px;
+    font-family: var(--font-marck), cursive;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}

@@ -46,7 +46,7 @@
     flex-direction: column;
     height: 66vh;
     flex: 1;
-    padding: 10px;
+    padding: 5px 0 10px 5px;
 }
 
 .directions__list div h3 {
