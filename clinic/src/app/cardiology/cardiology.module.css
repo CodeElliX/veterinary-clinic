@@ -1,0 +1,207 @@
+.wrap {
+    color: rgb(30, 75, 80);
+    background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
+}
+
+.wrap img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.content {
+    padding: 5%;
+}
+
+.head {
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.head h1 {
+    text-align: center;
+}
+
+.head p {
+    width: 80%;
+    padding: 1%;
+    align-self: center;
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+}
+
+.head b {
+    width: 80%;
+    align-self: center;
+}
+
+.menu {
+    padding: 5% 0;
+    border-bottom: 4px solid rgb(96, 131, 134);
+}
+
+.menu h2 {
+    width: max-content;
+    margin-bottom: 5%;
+    border-bottom: 4px solid green;
+}
+
+.menu ul {
+    display: inline-flex;
+
+}
+
+.menu ul li {
+    flex: 1;
+    width: 70%;
+    list-style: none;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1%;
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+}
+
+.menu ul li:not(:last-child) {
+    margin-right: 2%;
+}
+
+.menu ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.menu ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.symptoms {
+    padding: 5% 0;
+    display: inline-flex;
+}
+
+.symptoms img {
+    border: 4px solid white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+}
+
+.symptoms__description h2 {
+    width: max-content;
+    margin-bottom: 5%;
+    border-bottom: 4px solid green;
+}
+
+.symptoms__description p {
+    padding-bottom: 2%;
+    font-weight: 600;
+    width: 90%;
+}
+
+.symptoms__description ul li {
+    list-style: "🔹  ";
+    list-style-position: inside;
+}
+
+.cardiology {
+    padding: 5% 0;
+}
+
+.cardiology h2 {
+    width: max-content;
+    margin-bottom: 2%;
+    border-bottom: 4px solid green;
+}
+
+.cardiology ul {
+    margin-left: 8%;
+}
+
+.cardiology ul li {
+    width: 80%;
+    list-style: "✅  ";
+    margin-bottom: 2%;
+}
+
+.cardiology ul li h3 {
+    color: white;
+    padding-left: 1%;
+    background-color: rgb(96, 131, 134);
+}
+
+.why_we {
+    padding: 5% 0 2% 0;
+    border-bottom: 4px solid rgb(96, 131, 134);
+}
+
+.why_we h2 {
+    border-bottom: 4px solid green;
+    width: max-content;
+    margin-bottom: 5%;
+}
+
+.why_we ul {
+    display: flex;
+    padding-bottom: 5%;
+}
+
+.why_we ul li {
+    flex: 1;
+    list-style: none;
+    list-style-position: inside;
+    margin-right: 10px;
+    text-align: center;
+    padding: 2%;
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+    border-left: 10px solid rgb(145, 212, 220);
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 5%;
+}
+
+.prices h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+}
+
+.prices ul {
+    width: 50%;
+}
+
+.prices ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    list-style: none;
+    padding-left: 2%;
+    width: 100%;
+}
+
+.prices ul li span {
+    padding-right: 2%;
+}
+
+.prices ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.prices ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.banner {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 1%;
+    margin-top: 5%;
+    border-radius: 4px;
+    font-family: var(--font-marck), cursive;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
