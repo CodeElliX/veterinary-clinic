@@ -1,0 +1,170 @@
+.wrap {
+    background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
+}
+
+.wrap img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.content {
+    padding: 5%;
+}
+
+.head {
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.head h1 {
+    text-align: center;
+}
+
+.head p {
+    width: 80%;
+    align-self: center;
+}
+
+.timing {
+    padding: 5% 0;
+    border-bottom: 4px solid green;
+}
+
+.timing h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+    margin-bottom: 2%;
+}
+
+.timing ul {
+    display: flex;
+}
+
+.timing ul li {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    padding: 2%;
+}
+
+.timing ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.timing ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.menu {
+    padding: 5% 0;
+}
+
+.menu h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+    margin-bottom: 4%;
+}
+
+.menu__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__list__li {
+    padding-bottom: 2%;
+    padding-top: 1%;
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 120, 215, 0.2);
+}
+
+.menu__list__li h3 {
+    width: max-content;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(0, 120, 215);
+    color: white;
+}
+
+.menu__list__li ul li {
+    list-style-position: inside;
+    list-style-type: "🔹  ";
+}
+
+.menu__list__li p {
+    margin-top: 2%;
+}
+
+.why_we {
+    border-bottom: 4px solid green;
+    padding-bottom: 5%;
+}
+
+.why_we h2 {
+    border-bottom: 4px solid green;
+    width: max-content;
+}
+
+.why_we ul {
+    display: flex;
+    padding: 5% 0 0 0;
+}
+
+.why_we ul li {
+    flex: 1;
+    list-style-type: "✅  ";
+    list-style-position: inside;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.banner {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 1%;
+    margin: 2% 0;
+    border-radius: 4px;
+    font-family: var(--font-marck), cursive;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5% 5% 3% 5%;
+}
+
+.prices h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+}
+
+.prices ul {
+    width: 50%;
+}
+
+.prices ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    list-style: none;
+    padding-left: 2%;
+    width: 100%;
+}
+
+.prices ul li span {
+    padding-right: 2%;
+}
+
+.prices ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.prices ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
