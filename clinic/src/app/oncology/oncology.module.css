@@ -1,0 +1,263 @@
+.wrap {
+    color: rgb(30, 75, 80);
+    background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
+}
+
+.wrap img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.content {
+    padding: 5%;
+}
+
+.head {
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.head h1 {
+    text-align: center;
+}
+
+.head p {
+    width: 80%;
+    padding: 1%;
+    align-self: center;
+}
+
+.head b {
+    width: 80%;
+    align-self: center;
+}
+
+.about {
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2% 5%;
+    background-color: rgb(96, 131, 134);
+    border-left: 10px solid green;
+}
+
+.about h2 {
+    text-decoration: overline;
+    flex: 1;
+}
+
+.about__content {
+    text-align: start;
+    padding-bottom: 1%;
+    flex: 1;
+    border-bottom: 2px solid;
+}
+
+.symptoms {
+    padding: 5% 0;
+}
+
+.symptoms h2 {
+    width: max-content;
+    margin-bottom: 5%;
+    border-bottom: 4px solid green;
+}
+
+.symptoms ul {
+    display: flex;
+    text-align: center;
+}
+
+.symptoms ul li {
+    flex: 1;
+    margin-right: 2%;
+    padding: 1%;
+    list-style-type: "➡️  ";
+    list-style-position: inside;
+    border-bottom: 4px solid rgba(15, 15, 227, 0.5);
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.3);
+}
+
+.symptoms p {
+    margin-top: 2%;
+    font-weight: 600;
+}
+
+.service {
+    padding: 3% 0 3% 0;
+    border-bottom: 4px solid rgb(96, 131, 134);
+}
+
+.service h2 {
+    width: max-content;
+    margin-bottom: 3%;
+    border-bottom: 4px solid green;
+}
+
+.service__content {
+    display: flex;
+}
+
+.service__content__first {
+    flex: 1;
+    margin-right: 2%;
+}
+
+.service__content__second {
+    flex: 1;
+}
+
+.service__content h3 {
+    text-align: center;
+    margin-bottom: 2%;
+    background-color: rgb(96, 131, 134);
+    color: white;
+}
+
+.service__content ul li {
+    list-style-position: inside;
+    list-style-type: "✔️ ";
+    padding-bottom: 2%;
+}
+
+.species {
+    width: 100%;
+    display: flex;
+    padding: 5% 0;
+}
+
+.species img {
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+}
+
+.species__content {
+    width: 90%;
+}
+
+.species h2 {
+    text-align: center;
+    width: 75%;
+    margin-bottom: 3%;
+    border-bottom: 4px solid green;
+}
+
+.species ul {
+    margin-left: 5%;
+}
+
+.species ul li {
+    margin-bottom: 1%;
+    padding-left: 1%;
+    list-style-type: "*️⃣  ";
+}
+
+.individual {
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    padding: 2% 3%;
+    background-color: rgb(96, 131, 134);
+    border-left: 10px solid green;
+}
+
+.individual h2 {
+    text-decoration: overline;
+    flex: 1;
+}
+
+.individual p {
+    text-align: start;
+    padding-bottom: 1%;
+    flex: 1;
+    border-bottom: 2px solid;
+}
+
+.why_we {
+    padding: 5% 0 2% 0;
+    border-bottom: 4px solid rgb(96, 131, 134);
+}
+
+.why_we h2 {
+    border-bottom: 4px solid green;
+    width: max-content;
+    margin-bottom: 5%;
+}
+
+.why_we ul {
+    color: rgb(0, 120, 215);
+    display: flex;
+    padding-bottom: 5%;
+}
+
+.why_we ul li {
+    flex: 1;
+    list-style: none;
+    list-style-position: inside;
+    margin-right: 10px;
+    text-align: center;
+    padding: 2%;
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+    border-left: 10px solid rgb(145, 212, 220);
+}
+
+.why_we ul li svg {
+    fill: rgb(145, 212, 220);
+}
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 5%;
+}
+
+.prices h2 {
+    width: max-content;
+    border-bottom: 4px solid green;
+}
+
+.prices ul {
+    width: 50%;
+}
+
+.prices ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    list-style: none;
+    padding-left: 2%;
+    width: 100%;
+}
+
+.prices ul li span {
+    padding-right: 2%;
+}
+
+.prices ul li:nth-child(odd) {
+    background-color: rgb(204, 231, 233);
+}
+
+.prices ul li:nth-child(even) {
+    background-color: rgb(255, 255, 255);
+}
+
+.banner {
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+    padding: 1%;
+    margin-top: 5%;
+    border-radius: 4px;
+    font-family: var(--font-marck), cursive;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
