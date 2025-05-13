@@ -80,8 +80,9 @@
     padding: 1%;
     list-style-type: "➡️  ";
     list-style-position: inside;
-    border-bottom: 4px solid rgba(15, 15, 227, 0.5);
+    border-left: 4px solid rgb(15, 15, 227);
     box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.3);
+    border-radius: 4px;
 }
 
 .symptoms p {
