@@ -112,6 +112,116 @@
     border-bottom: 4px solid green;
 }
 
+.patology ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.patology p {
+    width: 50%;
+    padding-bottom: 2%;
+}
+
+.patology ul li {
+    width: 15%;
+    text-align: center;
+    margin-right: 2%;
+    padding: 1%;
+    list-style-type: "➡️  ";
+    border-left: 4px solid rgb(15, 15, 227);
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.3);
+    border-radius: 4px;
+}
+
+.diagnostics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.diagnostics__content {
+    padding-right: 5%;
+    width: 90%;
+}
+
+.diagnostics img {
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+}
+
+.diagnostics h2 {
+    width: max-content;
+    margin-bottom: 3%;
+    border-bottom: 4px solid green;
+}
+
+.diagnostics p {
+    width: 50%;
+    padding-bottom: 2%;
+}
+
+.diagnostics ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 2%;
+}
+
+.diagnostics ul li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-right: 1%;
+    background-color: rgb(145, 212, 220);
+    color: white;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+.treatment {
+    padding: 5% 0 2% 0;
+    border-bottom: 4px solid rgb(96, 131, 134);
+}
+
+.treatment h2 {
+    border-bottom: 4px solid green;
+    width: max-content;
+    margin-bottom: 2%;
+}
+
+.treatment span {
+    display: block;
+    width: 50%;
+    padding-bottom: 3%;
+    font-weight: 600;
+}
+
+.treatment ul {
+    color: rgb(0, 120, 215);
+    display: flex;
+    padding-bottom: 5%;
+}
+
+.treatment ul li {
+    flex: 1;
+    list-style: none;
+    list-style-position: inside;
+    margin-right: 10px;
+    text-align: center;
+    padding: 2%;
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+    border-left: 10px solid rgb(145, 212, 220);
+}
+
+.treatment ul li svg {
+    fill: rgb(145, 212, 220);
+}
+
 .prices {
     display: flex;
     flex-direction: column;
