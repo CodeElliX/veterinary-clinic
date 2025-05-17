@@ -1,0 +1,115 @@
+.wrap {
+    color: rgb(30, 75, 80);
+    background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
+}
+
+.wrap img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.content {
+    padding: 5%;
+}
+
+.head {
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.head h1 {
+    align-self: center;
+    width: 50%;
+    text-align: center;
+}
+
+.head p {
+    width: 80%;
+    padding: 1%;
+    align-self: center;
+}
+
+.content img {
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+    border: 4px solid white;
+    border-radius: 10px;
+}
+
+.diagnostics,
+.neurology,
+.mri,
+.endoscopy,
+.surgery,
+.inpatient,
+.documents,
+.ultrasond,
+.oncology,
+.complex {
+    display: flex;
+    justify-content: center;
+    padding: 5% 0;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.diagnostics h2,
+.neurology h2,
+.mri h2,
+.endoscopy h2,
+.surgery h2,
+.inpatient h2,
+.documents h2,
+.ultrasond h2,
+.oncology h2,
+.complex h2 {
+    text-align: center;
+    width: 80%;
+    padding: 1%;
+    align-self: center;
+    background-color: rgb(96, 131, 134);
+    color: white;
+    padding-left: 2%;
+    border-radius: 10px;
+}
+
+.diagnostics p,
+.neurology p,
+.mri p,
+.endoscopy p,
+.surgery p,
+.inpatient p,
+.documents p,
+.ultrasond p,
+.oncology p,
+.complex p {
+    align-self: center;
+    text-align: center;
+    margin-top: 5%;
+    padding: 2%;
+    width: 70%;
+    border-bottom: 4px solid rgb(145, 212, 220);
+}
+
+.description span {
+    background-color: rgb(145, 212, 220);
+    border-radius: 50%;
+    padding: 1%;
+}
+
+.banner {
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+    padding: 1%;
+    margin: 5% 0;
+    border-radius: 4px;
+    font-family: var(--font-marck), cursive;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}

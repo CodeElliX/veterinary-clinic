@@ -54,7 +54,7 @@ const Footer = () => {
                     <Link href='/all-services'><li>Послуги та ціни</li></Link>
                     <Link href='/all-specialists'><li>Спеціалісти</li></Link>
                     <Link href='/contacts'><li>Контакти</li></Link>
-                    <Link href='/'><li>Про клініку</li></Link>
+                    <Link href='/about-us'><li>Про клініку</li></Link>
                 </ul>
             </article>
             <article className={styles.footer__articles}>
