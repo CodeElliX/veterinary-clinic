@@ -1,9 +1,13 @@
 import styles from './advantages.module.css';
-import { chirurgiya, cardiology, mri } from '../../data/servicesData'
+import { chirurgiya, cardiology, mri, medal } from '../../data/servicesData'
 
 const Advantages = () => {
     return (
         <div className={styles.wrap}>
+            <div className={styles.wrap__years}>
+                <div className={styles.wrap__years_svg}>{medal}</div>
+                <h1>20 років разом із вами</h1>
+            </div>
             <div className={styles.advantages}>
                 <section className={styles.advantages__card}>
                     {mri}
@@ -34,7 +38,7 @@ const Advantages = () => {
                     </p>
                 </section>
             </div>
-            <h2 className={styles.wpap__header}>НАШІ ПЕРЕВАГИ</h2>
+            <h2 className={styles.wrap__header}>НАШІ ПЕРЕВАГИ</h2>
         </div>
     )
 }
