@@ -5,6 +5,7 @@ import Services from './components/services/page';
 import Image from 'next/image';
 import TbsDiagnostics from './components/tbs_diagnostics/page';
 import Specialists from './components/specialists/page';
+import Prevention from './components/prevention/page'
 
 export default function Home() {
 
@@ -55,6 +56,9 @@ export default function Home() {
       <section className={styles.services}>
         <Services />
         <Image src={'/paws.png'} width={400} height={100} alt='paws' />
+      </section>
+      <section className={styles.prevention}>
+        <Prevention />
       </section>
       <section className={styles.tbs_diagnostics}>
         <TbsDiagnostics />
