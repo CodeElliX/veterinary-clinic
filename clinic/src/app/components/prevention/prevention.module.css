@@ -28,7 +28,7 @@
     align-items: center;
     color: white;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    background-color: aqua;
+    background-color: rgb(129, 182, 189);
     flex: 1;
 }
 
@@ -61,5 +61,4 @@
 
 .pharmacy__description {
     flex: 1;
-    background-color: aqua;
 }

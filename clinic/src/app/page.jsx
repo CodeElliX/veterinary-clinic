@@ -5,7 +5,8 @@ import Services from './components/services/page';
 import Image from 'next/image';
 import TbsDiagnostics from './components/tbs_diagnostics/page';
 import Specialists from './components/specialists/page';
-import Prevention from './components/prevention/page'
+import Prevention from './components/prevention/page';
+import Advantages from './components/advantages/page'
 
 export default function Home() {
 
@@ -65,6 +66,9 @@ export default function Home() {
       </section>
       <section className={styles.specialists}>
         <Specialists />
+      </section>
+      <section>
+        <Advantages />
       </section>
     </div>
   );
