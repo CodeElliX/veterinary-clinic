@@ -5,7 +5,7 @@ const Prevention = () => {
     return (
         <div className={styles.wrap}>
             <div className={styles.terapy}>
-                <Image src={'/prevention.jpg'} width={600} height={400} alt='cat' />
+                <Image src={'/prevention.jpg'} width={600} height={400} alt='dog' />
                 <div className={styles.terapy__description}>
                     <h1>Ми не тільки лікуємо - ми турбуємость про хвостиків</h1>
                     <ul>

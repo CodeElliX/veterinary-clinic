@@ -1,6 +1,7 @@
 import styles from './all-services.module.css';
 import { allCards } from '../data/servicesData';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const AllServices = () => {
 
@@ -29,10 +30,9 @@ const AllServices = () => {
                     const path = titleToPath[el.tittle]
                     return (
                         <Link href={`${path}`}  key={index} className={styles.card}>
-                            <div>
+                            <Image src={`${el.back}`} width={415} height={510} alt='cards' />
                                 {el.photo}
                                 <h2>{el.tittle}</h2>
-                            </div>
                         </Link>
                     )
                 })}

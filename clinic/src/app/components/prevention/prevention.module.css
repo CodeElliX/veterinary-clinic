@@ -17,6 +17,7 @@
 
 .terapy img {
     flex: 1;
+    filter:  saturate(50%);
 }
 
 .terapy__description,
