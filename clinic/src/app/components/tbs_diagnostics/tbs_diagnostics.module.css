@@ -1,7 +1,7 @@
 .wrap {
     display: flex;
     padding: 50px 0;
-    border-bottom: 10px solid rgb(96, 131, 134);
+    border-bottom: 1px solid rgba(96, 131, 134, 0.3);
 }
 
 .photo {
