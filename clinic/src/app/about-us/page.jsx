@@ -18,7 +18,10 @@ const AboutUs = () => {
             <div className={styles.content}>
                 <section className={styles.about}>
                     <div className={styles.about__imgs}>
-
+                        <Image src={'/terapiya.jpg'} width={600} height={600} alt='anestiology' />
+                        <Image src={'/kat.jpg'} width={600} height={300} alt='anestiology' />
+                        <Image src={'/olga_doggies.jpg'} width={600} height={600} alt='anestiology' />
+                        <Image src={'/nazar2.jpg'} width={600} height={600} alt='anestiology' />
                     </div>
                     <div className={styles.about__description}>
                         <h1>Центр ветеринарної медицини на Разумовській</h1>
@@ -54,6 +57,12 @@ const AboutUs = () => {
                             ми — не просто клініка. Ми — команда, що піклується.
                         </p>
                     </div>
+                </section>
+                <section className={styles.animals}>
+                    <Image src={'/squirel.jpg'} width={300} height={300} alt='anestiology' />
+                    <Image src={'/rabbit.jpg'} width={300} height={300} alt='anestiology' />
+                    <Image src={'/ms.jpg'} width={300} height={300} alt='anestiology' />
+                    <Image src={'/catSurgery.jpg'} width={300} height={300} alt='anestiology' />
                 </section>
             </div>
             <Advantages />
