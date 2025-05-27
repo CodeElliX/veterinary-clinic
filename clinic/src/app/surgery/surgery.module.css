@@ -143,6 +143,8 @@
 
 .why_we ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
     padding: 5% 0 0 0;
 }
 

@@ -100,7 +100,9 @@ const Neurology = () => {
                             <li><span>6</span> Електроміографія (EMG) або інші вузькопрофільні тести — при підозрі на м’язові або нервові порушення.</li>
                         </ul>
                     </div>
-                    <Image src={"/neurology2.jpg"} width={600} height={600} alt='Neurology' />
+                    <div className={styles.diagnostics__content__img}>
+                        <Image src={"/neurology2.jpg"} width={600} height={600} alt='Neurology' />
+                    </div>
                 </section>
                 <hr />
                 <section className={styles.treatment}>
