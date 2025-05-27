@@ -65,6 +65,8 @@
 }
 
 .options h2 {
+    max-width: 100%;
+    text-align: center;
     width: max-content;
     margin-bottom: 3%;
     border-bottom: 4px solid green;
@@ -101,8 +103,10 @@
 }
 
 .advantages h2 {
+    max-width: 100%;
     width: max-content;
-    margin-bottom: 2%;
+    text-align: center;
+    margin-bottom: 5%;
     border-bottom: 4px solid green;
 }
 
@@ -140,23 +144,36 @@
 }
 
 .symptoms {
+    width: 100%;
+    height: max-content;
     display: flex;
     padding: 5% 0;
     border-bottom: 4px solid rgb(96, 131, 134);
 }
 
+.symptoms__content {
+    width: 50%;
+}
+
+.symptoms__img {
+    width: 50%;
+}
+
 .symptoms img {
+    width: 100%;
     box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
 }
 
 .symptoms h2 {
     width: max-content;
+    max-width: 100%;
+    text-align: center;
     margin-bottom: 5%;
     border-bottom: 4px solid green;
 }
 
 .symptoms ul {
-    margin: 1% 0 1% 5%;
+    margin: 1% 0 1% 10%;
 }
 
 .symptoms p {
@@ -177,21 +194,28 @@
 .why_we h2 {
     border-bottom: 4px solid green;
     width: max-content;
+    max-width: 100%;
+    text-align: center;
     margin-bottom: 5%;
 }
 
 .why_we ul {
     color: rgb(0, 120, 215);
     display: flex;
+    gap: 20px;
     padding-bottom: 5%;
 }
 
 .why_we ul li {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     list-style-position: inside;
     margin-right: 10px;
     text-align: center;
+    min-height: 85px;
     padding: 2%;
     box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
     border-left: 10px solid rgb(145, 212, 220);
@@ -205,6 +229,8 @@
 }
 
 .prices h2 {
+    max-width: 100%;
+    text-align: center;
     width: max-content;
     border-bottom: 4px solid green;
 }
@@ -233,4 +259,45 @@
 
 .prices ul li:nth-child(even) {
     background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+
+    .head p {
+        width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .options__content {
+        flex-direction: column;
+    }
+
+    .advantages ul {
+        flex-direction: column;
+    }
+
+    .symptoms {
+        flex-direction: column;
+    }
+
+    .symptoms__content {
+        width: 100%;
+    }
+
+    .symptoms__img {
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    .why_we ul {
+        flex-direction: column;
+    }
+
+    .prices ul {
+        width: 100%;
+    }
 }

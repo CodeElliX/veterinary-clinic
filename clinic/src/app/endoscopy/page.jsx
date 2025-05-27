@@ -113,7 +113,9 @@ const Endoscopy = () => {
                             хірургічного втручання.
                         </p>
                     </div>
-                    <Image src={'/endoscopy2.jpg'} width={600} height={900} alt='endoscopy2' />
+                    <div className={styles.symptoms__img}>
+                        <Image src={'/endoscopy2.jpg'} width={600} height={900} alt='endoscopy2' />
+                    </div>
                 </section>
                 <section className={styles.why_we}>
                     <h2>Чому обирають нас?</h2>
