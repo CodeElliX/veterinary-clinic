@@ -152,6 +152,8 @@
 }
 
 .diagnostics {
+    width: 100%;
+    height: max-content;
     display: flex;
     flex-wrap: wrap;
     padding: 5% 0;
@@ -160,12 +162,12 @@
 .diagnostics__content {
     max-width: 100%;
     padding-right: 5%;
-    flex: 2;
+    width: 50%;
 }
 
 .diagnostics__content__img {
-    flex: 1;
     align-self: center;
+    width: 50%;
 }
 
 .diagnostics img {
@@ -304,6 +306,10 @@
 
 @media (max-width: 768px) {
 
+    .head p {
+        width: 100%;
+    }
+
     .about {
         flex-direction: column;
     }
@@ -313,6 +319,14 @@
     }
 
     .diagnostics p {
+        width: 100%;
+    }
+
+    .diagnostics__content {
+        width: 100%;
+    }
+
+    .diagnostics__content__img {
         width: 100%;
     }
 

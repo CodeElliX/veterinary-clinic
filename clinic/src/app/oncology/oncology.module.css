@@ -39,6 +39,7 @@
 .about {
     color: white;
     display: inline-flex;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -65,28 +66,43 @@
 
 .symptoms h2 {
     width: max-content;
+    max-width: 100%;
+    text-align: center;
     margin-bottom: 5%;
     border-bottom: 4px solid green;
 }
 
 .symptoms ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     text-align: center;
 }
 
 .symptoms ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    list-style: none;
     flex: 1;
     margin-right: 2%;
-    padding: 1%;
-    list-style-type: "➡️  ";
-    list-style-position: inside;
+    min-height: 50px;
+    padding: 1% 1% 1% 2em;
     border-left: 4px solid rgb(15, 15, 227);
     box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.3);
     border-radius: 4px;
 }
 
+.symptoms ul li::before {
+    content: "➡️";
+    position: absolute;
+    left: 0.5em;
+    font-size: 1em;
+}
+
 .symptoms p {
-    margin-top: 2%;
+    margin-top: 4%;
     font-weight: 600;
 }
 
@@ -97,7 +113,9 @@
 
 .service h2 {
     width: max-content;
-    margin-bottom: 3%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 5%;
     border-bottom: 4px solid green;
 }
 
@@ -129,27 +147,38 @@
 
 .species {
     width: 100%;
-    display: flex;
+    height: max-content;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
     padding: 5% 0;
 }
 
-.species img {
-    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
+.species__img {
+    width: 58%;
 }
 
 .species__content {
-    width: 90%;
+    width: 40%;
+}
+
+.species img {
+    width: 100%;
+    box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
 }
 
 .species h2 {
     text-align: center;
-    width: 75%;
+    width: max-content;
+    max-width: 100%;
     margin-bottom: 3%;
     border-bottom: 4px solid green;
 }
 
 .species ul {
-    margin-left: 5%;
+    margin-left: 10%;
 }
 
 .species ul li {
@@ -190,17 +219,22 @@
 .why_we h2 {
     border-bottom: 4px solid green;
     width: max-content;
+    max-width: 100%;
+    text-align: center;
     margin-bottom: 5%;
 }
 
 .why_we ul {
     color: rgb(0, 120, 215);
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     padding-bottom: 5%;
 }
 
 .why_we ul li {
     flex: 1;
+    min-width: 30vw;
     list-style: none;
     list-style-position: inside;
     margin-right: 10px;
@@ -223,6 +257,8 @@
 
 .prices h2 {
     width: max-content;
+    max-width: 100%;
+    text-align: center;
     border-bottom: 4px solid green;
 }
 
@@ -261,4 +297,43 @@
     text-align: center;
     font-size: 18px;
     font-weight: 600;
+}
+
+@media (max-width: 768px) {
+
+    .head p {
+        width: 100%;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .symptoms ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .species__img {
+        width: 100%;
+    }
+
+    .species__content {
+        width: 100%;
+    }
+
+    .individual {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .why_we ul {
+        flex-direction: column;
+    }
+
+    .prices ul {
+        width: 100%;
+    }
+
 }

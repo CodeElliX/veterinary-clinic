@@ -99,7 +99,9 @@ const Oncology = () => {
                             <li>Метастатичні ураження та інші.</li>
                         </ul>
                     </div>
-                    <Image src={"/oncology2.jpg"} width={600} height={600} alt='oncology' />
+                    <div className={styles.species__img}>
+                        <Image src={"/oncology2.jpg"} width={600} height={600} alt='oncology' />
+                    </div>
                 </section>
                 <section className={styles.individual}>
                     <h2>Індивідуальний підхід — запорука успіху</h2>
