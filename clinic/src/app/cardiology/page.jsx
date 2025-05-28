@@ -88,7 +88,9 @@ const Cardiology = () => {
                             <li>Непритомність або судоми без очевидної причини</li>
                         </ul>
                     </div>
-                    <Image src={'/cardiology2.jpg'} width={600} height={600} alt='' />
+                    <div className={styles.symptoms__img}>
+                        <Image src={'/cardiology2.jpg'} width={600} height={600} alt='' />
+                    </div>
                 </section>
                 <hr />
                 <section className={styles.cardiology}>
