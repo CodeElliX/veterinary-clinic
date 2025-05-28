@@ -36,6 +36,8 @@
 
 .timing h2 {
     width: max-content;
+    max-width: 100%;
+    text-align: center;
     border-bottom: 4px solid green;
     margin-bottom: 2%;
 }
@@ -65,6 +67,8 @@
 
 .menu h2 {
     width: max-content;
+    max-width: 100%;
+    text-align: center;
     border-bottom: 4px solid green;
     margin-bottom: 4%;
 }
@@ -90,7 +94,7 @@
 }
 
 .menu__list__li ul li {
-    list-style-position: inside;
+    list-style-position: outside;
     list-style-type: "🔹  ";
 }
 
@@ -106,6 +110,8 @@
 .why_we h2 {
     border-bottom: 4px solid green;
     width: max-content;
+    max-width: 100%;
+    text-align: center;
 }
 
 .why_we ul {
@@ -141,6 +147,8 @@
 
 .prices h2 {
     width: max-content;
+    max-width: 100%;
+    text-align: center;
     border-bottom: 4px solid green;
 }
 
@@ -168,4 +176,60 @@
 
 .prices ul li:nth-child(even) {
     background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+    .head p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .timing h2 {
+        margin: 0 auto;
+    }
+
+    .timing ul {
+        margin-top: 5%;
+        flex-direction: column;
+    }
+
+    .timing ul li {
+        min-height: 50px;
+    }
+
+    .menu h2 {
+        margin: 0 auto;
+        margin-bottom: 5%;
+    }
+
+    .menu__list {
+        width: 100%;
+        gap: 20px;
+    }
+
+    .menu__list__li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu__list__li h3 {
+        max-width: 100%;
+    }
+
+    .menu__list__li__virus {
+        text-align: start;
+        margin-left: 8%;
+    }
+
+    .why_we ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .prices ul {
+        width: 100%;
+    }
 }
