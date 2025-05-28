@@ -12,9 +12,9 @@ const DiagnosticsTbs = () => {
 
     return (
         <div className={styles.wrap}>
+            <Image src={'/dog1.jpg'} width={1500} height={100} alt='dog1' />
             <div className={styles.content}>
                 <div className={styles.head}>
-                    <Image src={'/dog1.jpg'} width={1500} height={100} alt='dog1' />
                     <h1>Діагностика та оцінка дисплазії тазостегнових суглобів (ТБС)</h1>
                     <p>
                         У нашій ветеринарній клініці проводиться всебічна діагностика дисплазії
@@ -68,11 +68,11 @@ const DiagnosticsTbs = () => {
                         </div>
                     </div>
                 </article>
-                <span className={styles.note}>
+                <section className={styles.note}>
                     <b>Важливо пам’ятати:</b> дисплазія кульшових суглобів може розвиватися у собаки в
                     будь-якому віці, і своєчасне обстеження є запорукою ефективної профілактики та
                     лікування!
-                </span>
+                </section>
                 <article className={styles.safety}>
                     <h2>Чи є процедура безпечною?</h2>
                     <ul className={styles.list}>
