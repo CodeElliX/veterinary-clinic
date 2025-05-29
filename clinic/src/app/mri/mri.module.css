@@ -35,6 +35,8 @@
 }
 
 .procedure h2 {
+    max-width: 100%;
+    text-align: center;
     width: max-content;
     border-bottom: 4px solid green;
     margin-bottom: 1%;
@@ -73,6 +75,8 @@
 }
 
 .why_we h2 {
+    max-width: 100%;
+    text-align: center;
     width: max-content;
     border-bottom: 4px solid green;
 }
@@ -117,6 +121,8 @@
 
 .prices h2 {
     width: max-content;
+    max-width: 100%;
+    text-align: center;
     border-bottom: 4px solid green;
 }
 
@@ -144,4 +150,41 @@
 
 .prices ul li:nth-child(even) {
     background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+
+    .head p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .why_we ul {
+        margin: 5%;
+        flex-direction: column;
+    }
+
+    .why_we ul li {
+        display: flex;
+        align-items: center;
+        min-height: 100px;
+    }
+
+    .procedure h2 {
+        margin: 0 auto;
+    }
+
+    .procedure__content {
+        flex-direction: column;
+        margin: 5%;
+    }
+
+    .prices h2 {
+        margin: 0 auto;
+    }
+
+    .prices ul {
+        width: 100%;
+    }
+
 }
