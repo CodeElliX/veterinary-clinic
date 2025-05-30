@@ -33,6 +33,7 @@
 .head {
     display: inline-flex;
     padding-bottom: 30px;
+    width: 100%;
 }
 
 .head h1 {
@@ -41,6 +42,7 @@
     font-size: 30px;
     font-weight: 900;
     color: rgb(28, 78, 83);
+    max-width: 100%;
 }
 
 .head p {
@@ -62,6 +64,8 @@
 }
 
 .card {
+    min-width: 256px;
+    width: 256px;
     position: relative;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     overflow: hidden;
@@ -69,7 +73,7 @@
 
 .card img {
     height: 300px;
-    width: 20vw;
+    width: 100%;
     object-fit: cover;
     z-index: 0;
 }
@@ -207,4 +211,15 @@
     align-items: center;
     align-self: center;
     gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .head {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .head p {
+       text-align: center;
+    }
 }

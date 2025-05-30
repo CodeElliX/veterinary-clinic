@@ -33,10 +33,13 @@
 .directions h2 {
     border-bottom: 4px solid green;
     width: max-content;
+    max-width: 100%;
+    text-align: center;
 }
 
 .directions__list {
     display: flex;
+    flex-direction: column;
     gap: 10px;
     padding: 40px 0;
 }
@@ -44,14 +47,12 @@
 .directions__list div {
     display: flex;
     flex-direction: column;
-    height: 66vh;
-    flex: 1;
-    padding: 5px 0 10px 5px;
-}
-
-.directions__list div h3 {
-    text-align: center;
-    padding-top: 10%;
+    align-items: center;
+    height: 10vh;
+    min-height: max-content;
+    padding: 5%;
+    width: 75%;
+    box-shadow: 0 0 4px 4px rgba(63, 66, 69, 0.3);
 }
 
 .directions__list div:nth-child(odd) {
@@ -61,13 +62,14 @@
 
 .directions__list div:nth-child(even) {
     background-color: rgb(204, 231, 233);
-    border-radius: 40px;
+    border-radius: 30px;
+    align-self: flex-end;
 }
 
 .directions ul li {
     padding: 10px 0 5px 15px;
     list-style: none;
-    list-style-type: "◆  ";
+    list-style-type: "🔹  ";
     list-style-position: inside;
 }
 
@@ -203,4 +205,16 @@
 
 .prices ul li:nth-child(even) {
     background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 768px) {
+
+    .introduction p {
+        width: 100%;
+    }
+
+    .directions h2 {
+        margin: 0 auto;
+    }
+
 }
