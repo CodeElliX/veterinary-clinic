@@ -64,7 +64,7 @@ const Footer = () => {
                 </ul>
             </article>
             <article className={styles.footer__social}>
-                <h3>Ми у соціальних мережах: :</h3>
+                <h3>Ми у соціальних мережах:</h3>
                 <span>
                     <svg viewBox="0 0 96 96" className={styles.social_icon}>
                         <title />
