@@ -2,6 +2,7 @@ import styles from './advantages.module.css';
 import { chirurgiya, cardiology, mri, medal } from '../../data/servicesData'
 
 const Advantages = () => {
+    
     return (
         <div className={styles.wrap}>
             <div className={styles.wrap__years}>
