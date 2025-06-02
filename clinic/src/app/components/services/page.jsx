@@ -45,7 +45,9 @@ const Services = () => {
                                         <p><span className={styles.accent}>✔</span>{elem}</p>
                                     </div>
                                 ))}
-                                <span className={styles.detailed}>Більше..</span>
+                                <Link href={`${el.href}`} className={styles.detailed}>
+                                    <span>Більше..</span>
+                                </Link>
                             </div>
                         </div>
                     </div>
