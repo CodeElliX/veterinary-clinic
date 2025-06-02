@@ -124,3 +124,68 @@
 .active {
     color: rgb(46, 124, 131);
 }
+
+@media (max-width: 500px) {
+
+    .header__top {
+        height: max-content;
+    }
+
+    .header__top ul {
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header__top ul:last-child {
+        margin-bottom: 10px;
+    }
+
+    .header__top ul:first-child {
+        margin-top: 10px;
+    }
+
+    .header__top p {
+        font-size: 18px;
+    }
+
+    .header__top span {
+        justify-content: flex-start;
+    }
+
+    .header__bottom {
+        min-height: 50px;
+        height: max-content;
+        background-size: 60%;
+    }
+
+    .header__bottom ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .header__bottom ul li {
+        font-size: 16px;
+    }
+
+    .header__bottom img {
+        display: none;
+    }
+
+}
+
+@media (min-width: 501px) and (max-width: 1180px) {
+
+    .header__top ul .hide {
+        display: none;
+    }
+
+    .header__bottom {
+        background-size: 60%;
+    }
+
+    .header__bottom ul li {
+        font-size: 18px;
+    }
+
+}
