@@ -21,7 +21,7 @@ export default function Home() {
           width="100%"
         >
           <source src="/head_video.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает тег video.
+          Ваш браузер не підтримує тег video.
         </video>
         <div className={styles.video_label}>
           <p>
