@@ -6,12 +6,13 @@
     gap: 10px;
     bottom: 12px;
     right: 50px;
-    font-size: 50px;
+    font-size: clamp(26px, 4vw, 50px);
     font-weight: bolder;
 }
 
 .animation_wrap svg {
     fill: aliceblue;
+    width: clamp(26px, 4vw, 50px);
 }
 
 .letters {

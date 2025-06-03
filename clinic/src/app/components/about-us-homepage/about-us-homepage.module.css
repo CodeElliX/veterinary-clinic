@@ -1,3 +1,13 @@
+.wrap {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    min-height: max-content;
+    width: 100%;
+    margin: 50px 20px;
+}
+
 .description_section {
     position: relative;
     display: flex;
@@ -35,7 +45,6 @@
 
 .description_section img {
     z-index: 1;
-    fill: aliceblue;
     position: absolute;
     opacity: 0.1;
 }
@@ -78,12 +87,8 @@
     object-position: 20% 20%;
 }
 
-.foto_section .team {
-    border-radius: 50%;
-}
-
 .foto_section .oleg_stepanovich {
-    position: relative;
+    position: absolute;
     width: 300px;
     height: 300px;
     border-top-right-radius: 60px;
@@ -178,4 +183,49 @@
 .slideInLeft,
 .slideInRight {
     will-change: transform, opacity;
+}
+
+@media (max-width: 900px) {
+
+    .wrap {
+        height: max-content;
+        margin: 50px 5px;
+    }
+
+    .description_section {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .foto_section {
+        display: none;
+    }
+
+    .description_section h1 {
+        font-size: 22px;
+    }
+
+    .description_section p {
+        font-size: 16px;
+    }
+
+    .description_section h1::first-letter {
+        font-size: 4rem;
+    }
+
+    .description_section img {
+        z-index: 1;
+        position: absolute;
+        max-height: 40vh;
+        object-fit: contain;
+    }
+
+    .slideInLeft {
+        animation: none;
+    }
+
+    .slideInRight {
+        animation: none;
+    }
+
 }

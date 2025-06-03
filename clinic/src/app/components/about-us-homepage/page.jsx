@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import styles from './about-us-homepage.module.css';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 
 const AboutUsHomepage = () => {
 
@@ -10,8 +10,18 @@ const AboutUsHomepage = () => {
     const descRef = useRef(null);
     const [fotoVisible, setFotoVisible] = useState(false);
     const [descVisible, setDescVisible] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
+        const isMob = window.innerWidth < 900;
+        setIsMobile(isMob);
+
+        if (isMob) {
+            setDescVisible(true);
+            setFotoVisible(true);
+            return;
+        }
+
         const fotoObserver = new IntersectionObserver(
             ([entry]) => {
                 if (entry.intersectionRatio >= 0.3) {
@@ -30,15 +40,15 @@ const AboutUsHomepage = () => {
         );
 
         if (fotoRef.current) fotoObserver.observe(fotoRef.current);
-        if (descRef.current) descObserver.observe(descRef.current)
+        if (descRef.current) descObserver.observe(descRef.current);
 
     }, [])
 
     return (
-        <>
+        <div className={styles.wrap}>
             <div className={`
         ${styles.foto_section}
-        ${!fotoVisible ? styles.hiddenBeforeVisible : ''}
+        ${!fotoVisible && !isMobile ? styles.hiddenBeforeVisible : ''}
         ${fotoVisible ? styles.slideInLeft : ''}
            `}
                 ref={fotoRef}
@@ -63,7 +73,7 @@ const AboutUsHomepage = () => {
             </div>
             <div className={`
         ${styles.description_section}
-        ${!descVisible ? styles.hiddenBeforeVisible : ''}
+        ${!descVisible && !isMobile ? styles.hiddenBeforeVisible : ''}
         ${descVisible ? styles.slideInRight : ''}
            `}>
                 <h1>Про нашу клініку</h1>
@@ -75,7 +85,7 @@ const AboutUsHomepage = () => {
                 <Link href='/about-us'><span className={styles.btn}>Дізнатися більше</span></Link>
                 <Image src='/vet_symbols.png' alt='terapiya' width={500} height={500} />
             </div>
-        </>
+        </div>
     )
 }
 
