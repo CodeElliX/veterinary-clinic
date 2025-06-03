@@ -58,6 +58,7 @@
     padding: 10px;
     position: absolute;
     height: 20%;
+    min-height: max-content;
     width: 100%;
     background-color: rgb(255, 255, 255);
     bottom: 0;
@@ -67,11 +68,6 @@
     transition: opacity 0.7s ease, transform 0.6s ease;
     opacity: 1;
     transform: translateY(0);
-}
-
-.card:hover .bottom_description {
-    opacity: 0;
-    transform: translateY(100%);
 }
 
 .bottom_description h4 {
@@ -143,4 +139,51 @@
 .next svg {
     width: 20px;
     height: 20px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .card:hover .bottom_description {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+@media (min-width: 390px) and (max-width: 768px) {
+
+    .specialists {
+        gap: 10px;
+    }
+
+    .card {
+        width: 48%;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .top_description {
+        display: none;
+    }
+
+}
+
+@media (max-width: 389px) {
+
+    .specialists {
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .top_description {
+        display: none;
+    }
+
 }

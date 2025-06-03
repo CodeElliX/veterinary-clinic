@@ -102,6 +102,7 @@
     display: inline-block;
     text-align: center;
     width: 100%;
+    min-width: max-content;
     padding: 5px 20px;
     background-color: rgba(28, 78, 83, 0.8);
     border: none;
@@ -117,4 +118,35 @@
 .description .btn:hover {
     cursor: pointer;
     background-color: rgba(28, 78, 83, 0.6);
+}
+
+@media (max-width: 768px) {
+    .wrap {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    .description {
+        width: 100%;
+        margin-bottom: 4%;
+    }
+
+    .description h2 {
+        text-align: center;
+        width: 80%;
+    }
+
+    .description .btn {
+        width: 100%;
+    }
+
+    .pathology {
+}
+
+    .pathology_2 {
+    }
 }
