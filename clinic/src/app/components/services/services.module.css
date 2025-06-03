@@ -47,9 +47,8 @@
     transition: transform 0.6s;
 }
 
-.card:hover .card_inner {
+.card_inner.is_flipped {
     transform: rotateY(180deg);
-    cursor: pointer;
 }
 
 .card_front,
@@ -174,4 +173,46 @@
     z-index: 0;
     top: 30%;
     right: 1%;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .card:hover .card_inner {
+        transform: rotateY(180deg);
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .description {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .description h2 {
+        line-height: 1;
+        border-bottom: 1px solid rgb(145, 212, 220);
+    }
+
+    .card {
+        min-width: 100%;
+    }
+
+    .card_front h2 {
+        width: 80%;
+    }
+
+    .all_services_btn {
+        position: relative;
+        left: 0;
+        color: rgb(76, 63, 72);
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 1;
+        transition: transform 0.2s ease-in-out;
+    }
+
 }

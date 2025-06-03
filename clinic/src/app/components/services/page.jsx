@@ -1,8 +1,19 @@
+'use client'
 import Link from 'next/link';
 import styles from './services.module.css';
 import { cards } from '../../data/servicesData';
+import { useState } from 'react';
 
 const Services = () => {
+
+    const [flippedIndex, setFlippedIndex] = useState(null);
+
+    const handleCardClick = (index) => {
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        if (isTouchDevice) {
+            setFlippedIndex(flippedIndex === index ? null : index);
+        }
+    };
 
     return (
         <div className={styles.wrap}>
@@ -18,8 +29,8 @@ const Services = () => {
 
             <div className={styles.services_cards}>
                 {cards.map((el, index) => (
-                    <div key={index} className={styles.card}>
-                        <div className={styles.card_inner}>
+                    <div key={index} className={styles.card} onClick={() => handleCardClick(index)}>
+                        <div className={`${styles.card_inner} ${flippedIndex === index ? styles.is_flipped : ''}`}>
                             <div className={styles.card_front}>
                                 {el.photo}
                                 <h2>{el.tittle}</h2>
