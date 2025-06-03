@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './prevention.module.css';
 
 const Prevention = () => {
+
     return (
         <div className={styles.wrap}>
             <div className={styles.terapy}>

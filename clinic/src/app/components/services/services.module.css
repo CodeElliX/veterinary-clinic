@@ -118,8 +118,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 12vh;
-    width: 15vw;
+    height: 24%;
+    min-height: max-content;
+    width: 90%;
     padding: 1%;
     line-height: 1;
     font-size: 18px;
@@ -182,7 +183,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 500px) {
 
     .description {
         flex-direction: column;
@@ -196,23 +197,48 @@
     }
 
     .card {
-        min-width: 100%;
+        min-width: 90%;
+        min-height: 30vh;
     }
 
     .card_front h2 {
         width: 80%;
+        min-height: max-content;
+        max-height: 20%;
     }
 
     .all_services_btn {
-        position: relative;
         left: 0;
-        color: rgb(76, 63, 72);
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        z-index: 1;
-        transition: transform 0.2s ease-in-out;
+    }
+
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+
+    .description {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .description h2 {
+        line-height: 1;
+        border-bottom: 1px solid rgb(145, 212, 220);
+    }
+
+    .card_front h2 {
+        width: max-content;
+        max-width: 98%;
+        height: 20%;
+    }
+
+    .all_services_btn {
+        left: 0;
+    }
+
+    .card {
+        min-width: 80%;
+        min-height: 50vh;
     }
 
 }
