@@ -4,7 +4,9 @@
     flex-direction: column;
     width: 100%;
     height: 100vh;
+    min-height: max-content;
     background-image: url('/advantages.jpg');
+    background-repeat: no-repeat;
 }
 
 .wrap__years {
@@ -25,8 +27,6 @@
     width: 200px;
     height: 200px;
     fill: rgb(107, 81, 174);
-    mask-size: 200% 100%;
-    mask-repeat: no-repeat;
     filter: drop-shadow(0 0 20px rgba(200, 150, 255, 0.8));
 }
 
@@ -53,6 +53,7 @@
     gap: 20px;
     width: 60%;
     height: 60vh;
+    min-height: max-content;
 }
 
 .advantages__card {
@@ -60,6 +61,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    min-height: 100%;
+    max-height: max-content;
     padding: 2%;
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -75,4 +78,54 @@
 
 .advantages__card p {
     font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+
+    .wrap {
+        min-height: max-content;
+        height: 1000px;
+        margin-bottom: 5%;
+    }
+
+    .advantages {
+        flex-direction: column;
+        align-self: center;
+        width: 90%;
+        justify-content: first baseline;
+    }
+
+    .advantages__card {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .wrap__years {
+        position: static;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .wrap__header {
+        display: none;
+    }
+
+    .wrap__years .wrap__years_svg svg {
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
+
+@media (min-width: 1101px) and (max-width: 1200px) {
+
+    .wrap {
+        height: max-content;
+    }
+
+    .wrap__header {
+        margin-bottom: 20px;
+    }
+
 }
