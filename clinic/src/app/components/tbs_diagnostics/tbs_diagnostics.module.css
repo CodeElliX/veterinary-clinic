@@ -1,5 +1,9 @@
 .wrap {
     display: flex;
+    flex-direction: row;
+    height: 600px;
+    min-height: max-content;
+    width: 100%;
     padding: 50px 0;
     border-bottom: 1px solid rgba(96, 131, 134, 0.3);
 }
@@ -94,10 +98,6 @@
     font-family: var(--font-nunito);
 }
 
-.description a {
-    width: 26%;
-}
-
 .description .btn {
     display: inline-block;
     text-align: center;
@@ -121,6 +121,7 @@
 }
 
 @media (max-width: 768px) {
+
     .wrap {
         display: flex;
         flex-direction: column-reverse;
@@ -132,7 +133,8 @@
 
     .description {
         width: 100%;
-        margin-bottom: 4%;
+        margin-bottom: 2%;
+        min-height: max-content;
     }
 
     .description h2 {
@@ -141,12 +143,8 @@
     }
 
     .description .btn {
+        margin-top: 4%;
         width: 100%;
     }
 
-    .pathology {
-}
-
-    .pathology_2 {
-    }
 }

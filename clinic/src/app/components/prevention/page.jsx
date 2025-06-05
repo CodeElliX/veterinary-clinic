@@ -19,6 +19,7 @@ const Prevention = () => {
                     <b>... та багато інших послу направлені на профілактування захворювань та підвищення якості життя наших маленьких друзів</b>
                 </div>
             </div>
+            <div className={styles.border}></div>
             <div className={styles.pharmacy}>
                 <div className={styles.pharmacy__description}>
                     <h1>Ветеринарна аптека та зоомагазин</h1>

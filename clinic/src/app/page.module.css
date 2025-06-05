@@ -144,13 +144,6 @@
     z-index: 0;
 }
 
-.tbs_diagnostics {
-    display: flex;
-    flex-direction: row;
-    height: 90vh;
-    width: 100%;
-}
-
 .specialists {
     display: flex;
     flex-direction: row;

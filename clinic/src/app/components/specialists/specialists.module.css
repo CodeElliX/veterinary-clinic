@@ -170,6 +170,10 @@
 
 @media (max-width: 389px) {
 
+    .wrap h2 {
+        align-self: center;
+    }
+
     .specialists {
         gap: 10px;
     }

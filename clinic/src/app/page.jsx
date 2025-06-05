@@ -69,7 +69,7 @@ export default function Home() {
       <section className={styles.prevention}>
         <Prevention />
       </section>
-      <section className={styles.tbs_diagnostics}>
+      <section>
         <TbsDiagnostics />
       </section>
       <section className={styles.specialists}>
