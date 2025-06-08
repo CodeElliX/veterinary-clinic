@@ -77,16 +77,6 @@
     z-index: 0;
 }
 
-.card:hover .bottom_description {
-    opacity: 0;
-    transform: translateY(100%);
-}
-
-.card:hover .top_description {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .top_description {
     display: flex;
     flex-direction: column;
@@ -226,8 +216,22 @@
     }
 }
 
+@media (hover:hover) and (pointer:fine) {
+
+    .card:hover .bottom_description {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    .card:hover .top_description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
 @media (max-width: 768px) {
-    
+
     .head {
         flex-direction: column;
         gap: 20px;

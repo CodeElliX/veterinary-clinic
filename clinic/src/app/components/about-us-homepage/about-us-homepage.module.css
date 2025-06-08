@@ -69,11 +69,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-.description_section .btn:hover {
-    cursor: pointer;
-    background-color: rgba(28, 78, 83, 0.6);
-}
-
 .foto_section {
     width: 50%;
     position: relative;
@@ -183,6 +178,15 @@
 .slideInLeft,
 .slideInRight {
     will-change: transform, opacity;
+}
+
+@media (hover:hover) and (pointer:fine) {
+
+    .description_section .btn:hover {
+        cursor: pointer;
+        background-color: rgba(28, 78, 83, 0.6);
+    }
+
 }
 
 @media (max-width: 900px) {

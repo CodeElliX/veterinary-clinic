@@ -53,10 +53,6 @@
     height: 30px;
 }
 
-.social_icon:hover {
-    cursor: pointer;
-}
-
 .header__bottom {
     display: flex;
     align-items: center;
@@ -105,16 +101,6 @@
     transition: all 0.2s ease-in-out;
 }
 
-
-.header__bottom ul li:hover {
-    cursor: pointer;
-}
-
-.header__bottom ul li:hover::after {
-    cursor: pointer;
-    width: 100%;
-}
-
 .header__bottom_fixed {
     position: fixed;
     z-index: 10;
@@ -124,6 +110,22 @@
 .active {
     color: rgb(46, 124, 131);
 }
+
+@media (hover:hover) and (pointer:fine) {
+    .header__bottom ul li:hover {
+        cursor: pointer;
+    }
+
+    .header__bottom ul li:hover::after {
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .social_icon:hover {
+        cursor: pointer;
+    }
+}
+
 
 @media (max-width: 500px) {
 

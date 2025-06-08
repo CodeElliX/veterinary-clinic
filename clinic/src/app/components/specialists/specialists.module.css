@@ -100,11 +100,6 @@
     transition: opacity 0.3s ease, transform 0.6s ease;
 }
 
-.card:hover .top_description {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 .top_description h4 {
     color: rgb(19, 54, 58);
     width: 50%;
@@ -126,12 +121,6 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.next:hover {
-    cursor: pointer;
-    color: rgb(98, 43, 226);
-    fill: rgb(98, 43, 226);
-}
-
 .next:active {
     transform: translateY(1px);
 }
@@ -146,6 +135,24 @@
         opacity: 0;
         transform: translateY(100%);
     }
+
+    .next:hover {
+        cursor: pointer;
+        color: rgb(98, 43, 226);
+        fill: rgb(98, 43, 226);
+    }
+
+    .card:hover .top_description {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .next:hover {
+        cursor: pointer;
+        color: rgb(98, 43, 226);
+        fill: rgb(98, 43, 226);
+    }
+
 }
 
 @media (min-width: 390px) and (max-width: 768px) {

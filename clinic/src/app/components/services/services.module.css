@@ -92,11 +92,6 @@
     font-size: 20px;
 }
 
-.detailed:hover {
-    color: rgb(98, 43, 226);
-    text-decoration: underline;
-}
-
 .detailed:active {
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -145,12 +140,6 @@
     transform: translateY(1px);
 }
 
-.all_services_btn:hover {
-    cursor: pointer;
-    color: rgb(98, 43, 226);
-    fill: rgb(98, 43, 226);
-}
-
 .all_services_btn svg {
     display: block;
     width: 20px;
@@ -180,6 +169,17 @@
     .card:hover .card_inner {
         transform: rotateY(180deg);
         cursor: pointer;
+    }
+
+    .detailed:hover {
+        color: rgb(98, 43, 226);
+        text-decoration: underline;
+    }
+
+    .all_services_btn:hover {
+        cursor: pointer;
+        color: rgb(98, 43, 226);
+        fill: rgb(98, 43, 226);
     }
 }
 
