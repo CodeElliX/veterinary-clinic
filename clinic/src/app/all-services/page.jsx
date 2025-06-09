@@ -22,6 +22,7 @@ const AllServices = () => {
     };
 
     useEffect(() => {
+
         if (window.innerWidth <= 1174) {
             const observer = new IntersectionObserver(
                 (entries) => {
