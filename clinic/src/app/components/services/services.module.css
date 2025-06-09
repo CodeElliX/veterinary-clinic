@@ -9,18 +9,35 @@
 
 .description {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .description h2 {
-    flex: 1;
     font-family: var(--font-marck), cursive;
     font-size: 36px;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 1s ease-out;
+    width: 50%;
 }
 
 .description p {
-    flex: 1;
+    transition: all 2s ease-out;
+    transition-delay: 0.2s;
+    opacity: 0;
+    transform: translateX(50px);
+    width: 50%;
+}
+
+.description .titleVisible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.description .paragraphVisible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .services_cards {
@@ -33,6 +50,7 @@
 }
 
 .card {
+    display: flex;
     z-index: 1;
     width: 250px;
     height: 300px;
@@ -192,8 +210,13 @@
     }
 
     .description h2 {
+        width: 100%;
         line-height: 1;
         border-bottom: 1px solid rgb(145, 212, 220);
+    }
+
+    .description p {
+        width: 100%;
     }
 
     .card {
@@ -222,8 +245,13 @@
     }
 
     .description h2 {
+        width: 100%;
         line-height: 1;
         border-bottom: 1px solid rgb(145, 212, 220);
+    }
+
+    .description p {
+        width: 100%;
     }
 
     .card_front h2 {

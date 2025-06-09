@@ -2,11 +2,14 @@
 import Link from 'next/link';
 import styles from './services.module.css';
 import { cards } from '../../data/servicesData';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Services = () => {
 
     const [flippedIndex, setFlippedIndex] = useState(null);
+    const wrapRef = useRef(null);
+    const [titleVisible, setTitleVisible] = useState(false);
+    const [paragraphVisible, setParagraphVisible] = useState(false);
 
     const handleCardClick = (index) => {
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -15,11 +18,35 @@ const Services = () => {
         }
     };
 
+    useEffect(() => {
+        if (window.innerWidth >= 1100) {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            setTitleVisible(true);
+                            setParagraphVisible(true);
+                        } else {
+                            setTitleVisible(false);
+                            setParagraphVisible(false);
+                        }
+                    })
+
+                },
+                { threshold: 0.1 }
+            )
+
+            observer.observe(wrapRef.current)
+
+            return () => observer.disconnect();
+        }
+    }, [])
+
     return (
-        <div className={styles.wrap}>
+        <div className={styles.wrap} ref={wrapRef}>
             <div className={styles.description}>
-                <h2>Послуги нашого центру:</h2>
-                <p>
+                <h2 className={`${titleVisible ? styles.titleVisible : ''}`}>Послуги нашого центру:</h2>
+                <p className={`${paragraphVisible ? styles.paragraphVisible : ''}`}>
                     В Центрі Ветеринарної Медицини є все необхідне обладнання та фахівці
                     різних ветеринарних спеціальностей,
                     тому постановка діагноза та лікування пацієнтів може відбуваєтися
