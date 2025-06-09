@@ -10,9 +10,11 @@ const AllSpecialists = () => {
     const timeoutRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
     const [animationKey, setAnimationKey] = useState(0);
+    const [paragraphVisible, isParagraphVisible] = useState(false);
     const text = 'Наші фахівці:';
 
     useEffect(() => {
+        isParagraphVisible(true);
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -50,7 +52,7 @@ const AllSpecialists = () => {
                         ))}
                     </span>
                 </h1>
-                <p>
+                <p className={`${paragraphVisible ? styles.paragraph_visible : ''}`}>
                     У Центрі ветеринарної медицини «ЦВМ на Разумовській» працює команда професіоналів,
                     яка щодня піклується про здоров’я ваших улюбленців. Наші лікарі мають не лише
                     глибокі знання, а й багаторічний практичний досвід у сфері ветеринарії.
