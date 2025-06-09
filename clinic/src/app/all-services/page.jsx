@@ -3,9 +3,11 @@ import styles from './all-services.module.css';
 import { allCards } from '../data/servicesData';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const AllServices = () => {
+
+    const [headVisible, isHeadVisible] = useState(false);
 
     const titleToPath = {
         'Хірургічні маніпуляції': 'surgery',
@@ -23,6 +25,8 @@ const AllServices = () => {
 
     useEffect(() => {
 
+        isHeadVisible(true);
+
         if (window.innerWidth <= 1174) {
             const observer = new IntersectionObserver(
                 (entries) => {
@@ -39,14 +43,14 @@ const AllServices = () => {
 
             const cards = document.querySelectorAll(`.${styles.card}`);
             cards.forEach((card) => observer.observe(card));
-
             return () => observer.disconnect();
         }
+        return () => { }
     }, []);
 
     return (
         <div className={styles.wrap}>
-            <div className={styles.description}>
+            <div className={`${styles.description} ${headVisible ? styles.head_visible : ''}`}>
                 <h1>Усі послуги нашого центру:</h1>
                 <p>Оберіть послугу, щоб дізнатися деталі та ціни.</p>
             </div>

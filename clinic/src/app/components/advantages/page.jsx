@@ -8,25 +8,23 @@ const Advantages = () => {
     const cardRef = useRef([]);
 
     useEffect(() => {
-        if (window.innerWidth <= 1100) {
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add(styles.mobile_animate);
-                        } else {
-                            entry.target.classList.remove(styles.mobile_animate)
-                        }
-                    })
-                },
-                { threshold: 0.3 }
-            );
-            cardRef.current.forEach((card) => {
-                if (card) observer.observe(card);
-            })
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(styles.animate);
+                    } else {
+                        entry.target.classList.remove(styles.animate)
+                    }
+                })
+            },
+            { threshold: 0.3 }
+        );
+        cardRef.current.forEach((card) => {
+            if (card) observer.observe(card);
+        })
 
-            return () => observer.disconnect();
-        }
+        return () => observer.disconnect();
     }, [])
 
     const cardsData = [

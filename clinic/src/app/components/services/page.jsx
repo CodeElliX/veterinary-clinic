@@ -19,27 +19,25 @@ const Services = () => {
     };
 
     useEffect(() => {
-        if (window.innerWidth >= 1100) {
-            const observer = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            setTitleVisible(true);
-                            setParagraphVisible(true);
-                        } else {
-                            setTitleVisible(false);
-                            setParagraphVisible(false);
-                        }
-                    })
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setTitleVisible(true);
+                        setParagraphVisible(true);
+                    } else {
+                        setTitleVisible(false);
+                        setParagraphVisible(false);
+                    }
+                })
 
-                },
-                { threshold: 0.1 }
-            )
+            },
+            { threshold: 0.1 }
+        )
 
-            observer.observe(wrapRef.current)
+        observer.observe(wrapRef.current)
 
-            return () => observer.disconnect();
-        }
+        return () => observer.disconnect();
     }, [])
 
     return (

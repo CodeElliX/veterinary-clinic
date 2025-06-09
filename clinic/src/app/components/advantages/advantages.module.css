@@ -97,14 +97,8 @@
     font-size: 14px;
 }
 
-.mobile_animate {
+.animate {
     animation: carsdScale 4s forwards;
-}
-
-@media (hover:hover) and (pointer:fine) {
-    .wrap:hover .advantages__card {
-        animation: carsdScale 2s forwards;
-    }
 }
 
 @media (max-width: 1100px) {
