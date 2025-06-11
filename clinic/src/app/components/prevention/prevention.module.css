@@ -31,6 +31,12 @@
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     background-color: rgb(129, 182, 189);
     flex: 1;
+    transform: scale(0);
+    transition: all 0.8s linear;
+}
+
+.animation {
+    transform: scale(1);
 }
 
 .terapy__description h1,

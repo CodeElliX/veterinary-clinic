@@ -23,7 +23,6 @@ const Advantages = () => {
         cardRef.current.forEach((card) => {
             if (card) observer.observe(card);
         })
-
         return () => observer.disconnect();
     }, [])
 
