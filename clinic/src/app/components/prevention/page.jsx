@@ -12,12 +12,10 @@ const Prevention = () => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add(styles.animation);
-                } else {
-                    entry.target.classList.remove(styles.animation)
                 }
             })
         },
-            { threshold: 0.5 }
+            { threshold: 0.3 }
         )
         blocksRef.current.forEach(el => el && observer.observe(el))
         return () => observer.disconnect();
