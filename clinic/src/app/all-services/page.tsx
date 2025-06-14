@@ -21,7 +21,9 @@ const AllServices = () => {
         'Ендоскопія': 'endoscopy',
         'Онкологія': 'oncology',
         'Неврологія': 'neurology',
-    };
+    } as const;
+
+    type TitleKey = keyof typeof titleToPath;
 
     useEffect(() => {
 
@@ -56,7 +58,7 @@ const AllServices = () => {
             </div>
             <div className={styles.services_cards}>
                 {allCards.map((el, index) => {
-                    const path = titleToPath[el.tittle]
+                    const path = titleToPath[el.tittle as TitleKey]
                     return (
                         <Link href={`${path}`} key={index} className={styles.card}>
                             <Image src={`${el.back}`} width={415} height={510} alt='cards' />
