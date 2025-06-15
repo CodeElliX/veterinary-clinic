@@ -45,7 +45,6 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    perspective: 1000px;
     padding: 20px 0;
 }
 

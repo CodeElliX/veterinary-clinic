@@ -6,8 +6,8 @@ import { useRef, useState, useEffect } from 'react';
 
 const AllSpecialists = () => {
 
-    const headerRef = useRef(null);
-    const timeoutRef = useRef(null);
+    const headerRef = useRef<HTMLHeadingElement | null>(null);
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const [isVisible, setIsVisible] = useState(false);
     const [animationKey, setAnimationKey] = useState(0);
     const [paragraphVisible, isParagraphVisible] = useState(false);
@@ -18,7 +18,9 @@ const AllSpecialists = () => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    clearTimeout(timeoutRef.current);
+                    if (timeoutRef.current) {
+                        clearTimeout(timeoutRef.current);
+                    }
                     timeoutRef.current = setTimeout(() => {
                         setAnimationKey(prev => prev + 1);
                         setIsVisible(true);
@@ -35,7 +37,9 @@ const AllSpecialists = () => {
             observer.observe(headerRef.current);
         }
         return () => {
-            clearTimeout(timeoutRef.current);
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
             observer.disconnect();
         };
     }, [])
