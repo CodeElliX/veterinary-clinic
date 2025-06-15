@@ -25,32 +25,32 @@ const Prevention = () => {
         <div className={styles.wrap}>
             <div className={styles.terapy}>
                 <Image src={'/prevention.jpg'} width={600} height={400} alt='dog' />
-                <div className={styles.terapy__description} ref={(el) => blocksRef.current[1] = el}>
-                    <h1>Ми не тільки лікуємо - ми турбуємость про хвостиків</h1>
+                <div className={styles.terapy__description}>
+                    <h1 ref={(el) => blocksRef.current[0] = el}>Ми не тільки лікуємо - ми турбуємость про хвостиків</h1>
                     <ul>
-                        <li>вакцинація</li>
-                        <li>чіпування</li>
-                        <li>дієтологія</li>
-                        <li>грумінг</li>
-                        <li>чек-ап за віком</li>
+                        <li ref={(el) => blocksRef.current[1] = el}>вакцинація</li>
+                        <li ref={(el) => blocksRef.current[2] = el}>чіпування</li>
+                        <li ref={(el) => blocksRef.current[3] = el}>дієтологія</li>
+                        <li ref={(el) => blocksRef.current[4] = el}>грумінг</li>
+                        <li ref={(el) => blocksRef.current[5] = el}>чек-ап за віком</li>
                     </ul>
-                    <b>... та багато інших послу направлені на профілактування захворювань та підвищення якості життя наших маленьких друзів</b>
+                    <b ref={(el) => blocksRef.current[6] = el}>... та багато інших послу направлені на профілактування захворювань та підвищення якості життя наших маленьких друзів</b>
                 </div>
             </div>
             <div className={styles.border}></div>
             <div className={styles.pharmacy}>
-                <div className={styles.pharmacy__description} ref={(el) => blocksRef.current[2] = el}>
-                    <h1>Ветеринарна аптека та зоомагазин</h1>
+                <div className={styles.pharmacy__description}>
+                    <h1 ref={(el) => blocksRef.current[7] = el}>Ветеринарна аптека та зоомагазин</h1>
                     <ul>
-                        <li>Спеціалізовані дієти та корма преміум класу</li>
-                        <li>Молоко для вигодовування крихіток</li>
-                        <li>Вітаміни</li>
-                        <li>Ветеринарні препарати</li>
-                        <li>Попони та коміри</li>
+                        <li ref={(el) => blocksRef.current[8] = el}>Спеціалізовані дієти та корма преміум класу</li>
+                        <li ref={(el) => blocksRef.current[9] = el}>Молоко для вигодовування крихіток</li>
+                        <li ref={(el) => blocksRef.current[10] = el}>Вітаміни</li>
+                        <li ref={(el) => blocksRef.current[11] = el}>Ветеринарні препарати</li>
+                        <li ref={(el) => blocksRef.current[12] = el}>Попони та коміри</li>
                     </ul>
-                    <b>... у нас є все необхідне для лікування наших пацієнтів</b>
+                    <b ref={(el) => blocksRef.current[13] = el}>... у нас є все необхідне для лікування наших пацієнтів</b>
                 </div>
-                <Image src={'/prevention2.jpg'} width={600} height={600} alt='cat' ref={(el) => blocksRef.current[3] = el} />
+                <Image src={'/prevention2.jpg'} width={600} height={600} alt='cat' />
             </div>
         </div>
     )
