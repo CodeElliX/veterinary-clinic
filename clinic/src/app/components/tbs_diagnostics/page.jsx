@@ -1,14 +1,37 @@
+'use client'
 import Image from 'next/image';
 import styles from './tbs_diagnostics.module.css';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 
 const TbsDiagnostics = () => {
+
+    const imgRef = useRef([]);
+
+    useEffect(() => {
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.animation);
+                } else {
+                    entry.target.classList.remove(styles.animation);
+                }
+            })
+        },
+
+            { threshold: 0.5 }
+        )
+        imgRef.current.forEach((el) => el && observer.observe(el))
+        return () => observer.disconnect();
+    }, [])
+
     return (
         <div className={styles.wrap}>
             <div className={styles.photo}>
-                <Image src={'/d_tbs.jpg'} alt='tbs-pathology' width={200} height={200} className={styles.pathology} />
+                <Image src={'/d_tbs.jpg'} alt='tbs-pathology' width={200} height={200} className={styles.pathology} ref={(el) => imgRef.current[0] = el} />
                 <Image src={'/normal_tbs.jpg'} alt='tbs_normal' width={200} height={200} className={styles.normal} />
-                <Image src={'/d_tbs_2.jpg'} alt='tbs-pathology' width={200} height={200} className={styles.pathology_2} />
+                <Image src={'/d_tbs_2.jpg'} alt='tbs-pathology' width={200} height={200} className={styles.pathology_2} ref={(el) => imgRef.current[1] = el} />
             </div>
             <div className={styles.description}>
                 <h2>Діагностика та оцінка дисплазії тазостегнових суглобів</h2>
@@ -20,7 +43,7 @@ const TbsDiagnostics = () => {
                     а також тест Барлоу (кут повторного вивиху), що доповнюється рентгенографією
                     кульшових суглобів у різних проекціях.
                 </p>
-                <Link href='/diagnostics-tbs'><span className={styles.btn}>Детальніше</span></Link>
+                <Link href='/diagnostics-tbs'><p className={styles.btn}><span data-text="Детальніше" >Детальніше</span></p></Link>
             </div>
         </div>
     )

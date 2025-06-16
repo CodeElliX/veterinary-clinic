@@ -33,18 +33,28 @@
 }
 
 .pathology {
-    position: absolute;
-    z-index: 1;
-    left: 0;
     top: 0;
 }
 
 .pathology_2 {
+    bottom: 0;
+}
+
+.pathology,
+.pathology_2 {
+    transform: scale(0);
     position: absolute;
     z-index: 1;
     left: 0;
-    bottom: 0;
+    transition: all 1s ease-in-out;
 }
+
+.pathology.animation,
+.pathology_2.animation {
+    transition: all 1s ease-in-out;
+    transform: scale(1);
+}
+
 
 .description {
     position: relative;
@@ -108,18 +118,41 @@
     border: none;
     border-radius: 4px;
     color: rgb(240, 248, 255);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     font-size: 24px;
     font-weight: 400;
     font-family: var(--font-marck);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
+
+.btn span {
+    position: relative;
+    display: inline-block;
+}
+
+.btn span::before {
+    content: attr(data-text);
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    color: transparent;
+    background: linear-gradient(to right, #bae6fd, #c4b5fd, #f9a8d4);
+    background-clip: text;
+    transition: all 0.5s ease-in-out;
+}
+
 
 @media (hover: hover) and (pointer: fine) {
 
     .description .btn:hover {
         cursor: pointer;
-        background-color: rgba(28, 78, 83, 0.6);
+    }
+
+    .description .btn span:hover::before {
+        width: 100%;
+        left: 0;
     }
 
 }

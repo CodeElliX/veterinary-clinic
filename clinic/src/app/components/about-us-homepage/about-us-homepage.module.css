@@ -57,16 +57,35 @@
     display: inline-block;
     text-align: center;
     width: 100%;
+    min-width: max-content;
     padding: 5px 20px;
     background-color: rgba(28, 78, 83, 0.8);
     border: none;
     border-radius: 4px;
     color: rgb(240, 248, 255);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     font-size: 24px;
     font-weight: 400;
     font-family: var(--font-marck);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn span {
+    position: relative;
+    display: inline-block;
+}
+
+.btn span::before {
+    content: attr(data-text);
+    position: absolute;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    color: transparent;
+    background: linear-gradient(to right, #bae6fd, #c4b5fd, #f9a8d4);
+    background-clip: text;
+    white-space: nowrap;
+    transition: width 0.5s;
 }
 
 .foto_section {
@@ -184,7 +203,11 @@
 
     .description_section .btn:hover {
         cursor: pointer;
-        background-color: rgba(28, 78, 83, 0.6);
+    }
+
+    .description_section .btn span:hover::before {
+        width: 100%;
+        left: 0;
     }
 
 }
