@@ -1,8 +1,31 @@
+'use client'
 import Image from 'next/image';
 import styles from './about-us.module.css';
 import Advantages from '../components/advantages/page';
+import { useEffect, useRef } from 'react';
 
 const AboutUs = () => {
+
+    const imgRef = useRef<(HTMLDivElement | null)[]>([]);
+
+    useEffect(() => {
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.animation)
+                }else {
+                    entry.target.classList.remove(styles.animation)
+                }
+            }
+            )
+        },
+            { threshold: 1 }
+        )
+        imgRef.current.forEach((el) => el && observer.observe(el))
+        return () => observer.disconnect();
+    }, [])
+
     const heardsSvg = (<svg enableBackground="new 0 0 64 64" viewBox="0 0 64 64" className={styles.heards}>
         <g>
             <path d="M26.4,37.7C26.4,37.7,26.4,37.7,26.4,37.7c-0.3,0-0.5-0.1-0.7-0.3L9.2,20.7C4.4,15.7,4.5,7.9,9.4,3    c1.9-1.9,4.5-3,7.3-3c3.3,0,6.8,1.4,9.7,3.8C29.2,1.4,32.8,0,36.1,0c2.8,0,5.4,1,7.3,3c4.8,4.8,4.9,12.8,0.2,17.8L27.1,37.4    C26.9,37.6,26.6,37.7,26.4,37.7z M16.7,2c-2.3,0-4.3,0.8-5.9,2.4c-4.1,4.2-4.2,10.7-0.2,15l15.7,15.9l15.8-15.9    c4-4.2,3.9-10.9-0.2-15C40.4,2.8,38.4,2,36.1,2c-3.1,0-6.4,1.4-9,3.8c-0.4,0.4-1,0.4-1.4,0C23.1,3.4,19.7,2,16.7,2z" fill="#4D4D4D" />
@@ -27,19 +50,19 @@ const AboutUs = () => {
                     {heardsSvg}
                     <div className={styles.about__imgs}>
                         <div className={styles.about__imgs_1}>
-                            <Image src={'/terapiya.jpg'} width={600} height={600} alt='anestiology' />
+                            <Image src={'/terapiya.jpg'} width={600} height={600} alt='surgery' />
                         </div>
                         <div className={styles.about__imgs_2}>
-                            <Image src={'/kat.jpg'} width={600} height={600} alt='anestiology' />
+                            <Image src={'/kat.jpg'} width={600} height={600} alt='anestiolog' />
                         </div>
                         <div className={styles.about__imgs_3}>
-                            <Image src={'/hirurgiya.jpg'} width={600} height={600} alt='anestiology' />
+                            <Image src={'/hirurgiya.jpg'} width={600} height={600} alt='anestiolog' />
                         </div>
                         <div className={styles.about__imgs_4}>
-                            <Image src={'/olga_doggies.jpg'} width={600} height={600} alt='anestiology' />
+                            <Image src={'/olga_doggies.jpg'} width={600} height={600} alt='anestiolog' />
                         </div>
                         <div className={styles.about__imgs_5}>
-                            <Image src={'/nazar2.jpg'} width={600} height={600} alt='anestiology' />
+                            <Image src={'/nazar2.jpg'} width={600} height={600} alt='anestiolog' />
                         </div>
                     </div>
                     <div className={styles.about__description}>
@@ -78,10 +101,18 @@ const AboutUs = () => {
                     </div>
                 </section>
                 <section className={styles.animals}>
-                    <Image src={'/squirel.jpg'} width={300} height={300} alt='anestiology' />
-                    <Image src={'/rabbit.jpg'} width={300} height={300} alt='anestiology' />
-                    <Image src={'/ms.jpg'} width={300} height={300} alt='anestiology' />
-                    <Image src={'/catSurgery.jpg'} width={300} height={300} alt='anestiology' />
+                    <div ref={(el) => { imgRef.current[0] = el }}>
+                        <Image src={'/squirel.jpg'} width={300} height={300} alt='anestiology' />
+                    </div>
+                    <div ref={(el) => { imgRef.current[1] = el }}>
+                        <Image src={'/rabbit.jpg'} width={300} height={300} alt='anestiology' />
+                    </div>
+                    <div ref={(el) => { imgRef.current[2] = el }}>
+                        <Image src={'/ms.jpg'} width={300} height={300} alt='anestiology' />
+                    </div>
+                    <div ref={(el) => { imgRef.current[3] = el }}>
+                        <Image src={'/catSurgery.jpg'} width={300} height={300} alt='anestiology' />
+                    </div>
                 </section>
             </div>
             <Advantages />
