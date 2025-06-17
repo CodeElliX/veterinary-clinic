@@ -6,11 +6,11 @@ import { useLayoutEffect, useRef, useState } from 'react';
 
 const AboutUsHomepage = () => {
 
-    const fotoRef = useRef(null);
-    const descRef = useRef(null);
-    const [fotoVisible, setFotoVisible] = useState(false);
-    const [descVisible, setDescVisible] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
+    const fotoRef = useRef<HTMLDivElement | null>(null);
+    const descRef = useRef<HTMLDivElement | null>(null);
+    const [fotoVisible, setFotoVisible] = useState<boolean>(false);
+    const [descVisible, setDescVisible] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(false);
 
     useLayoutEffect(() => {
         const isMob = window.innerWidth < 900;
