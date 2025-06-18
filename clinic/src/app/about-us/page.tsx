@@ -14,7 +14,7 @@ const AboutUs = () => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add(styles.animation)
-                }else {
+                } else {
                     entry.target.classList.remove(styles.animation)
                 }
             }
