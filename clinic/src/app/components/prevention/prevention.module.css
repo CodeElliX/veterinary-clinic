@@ -57,7 +57,7 @@
 .terapy__description b,
 .pharmacy__description b {
     transform: translateY(400px);
-    transition: transform 2s ease-in-out;
+    transition: transform 1.3s ease-in-out;
 }
 
 .terapy__description h1.animation,
@@ -67,32 +67,37 @@
 .terapy__description b.animation,
 .pharmacy__description b.animation {
     transform: translateY(0);
-    transition: transform 2s ease-in-out;
+    transition: transform 1.3s ease-in-out;
+}
+
+.terapy__description b.animation,
+.pharmacy__description b.animation {
+    transition-delay: 0.7s;
+}
+
+.terapy__description li:nth-child(1).animation,
+.pharmacy__description li:nth-child(1).animation {
+    transition-delay: 0.1s;
 }
 
 .terapy__description li:nth-child(2).animation,
 .pharmacy__description li:nth-child(2).animation {
-    transition-delay: 0.1s;
+    transition-delay: 0.2s;
 }
 
 .terapy__description li:nth-child(3).animation,
 .pharmacy__description li:nth-child(3).animation {
-    transition-delay: 0.2s;
+    transition-delay: 0.3s;
 }
 
 .terapy__description li:nth-child(4).animation,
 .pharmacy__description li:nth-child(4).animation {
-    transition-delay: 0.3s;
+    transition-delay: 0.4s;
 }
 
 .terapy__description li:nth-child(5).animation,
 .pharmacy__description li:nth-child(5).animation {
-    transition-delay: 0.4s;
-}
-
-.terapy__description li:nth-child(6).animation,
-.pharmacy__description li:nth-child(6).animation {
-    transition-delay: 0.5s;
+    transition-delay: 0.6s;
 }
 
 .terapy__description ul li,
