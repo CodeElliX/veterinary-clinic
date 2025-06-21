@@ -11,7 +11,49 @@ const AllSpecialists = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [animationKey, setAnimationKey] = useState(0);
     const [paragraphVisible, isParagraphVisible] = useState(false);
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+    const bunnerRef = useRef(null);
+    const bannersElRef = useRef<(HTMLElement | null)[]>([]);
     const text = 'Наші фахівці:';
+
+    const setBannerRef = (index: number) => (el: HTMLHeadingElement | HTMLParagraphElement | null) => {
+        bannersElRef.current[index] = el;
+    };
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video) return;
+        const handleEnded = () => {
+            setTimeout(() => {
+                videoRef.current?.play();
+            }, 3000)
+        }
+        video.addEventListener("ended", handleEnded);
+        const startTimeout = setTimeout(() => {
+            video.play();
+        }, 3000);
+
+        return () => {
+            clearTimeout(startTimeout);
+            video.removeEventListener('ended', handleEnded);
+        }
+    }, [])
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    bannersElRef.current.forEach((el) => el?.classList.add(styles.active_banner));
+                } else {
+                    bannersElRef.current.forEach((el) => el?.classList.remove(styles.active_banner));
+                }
+            })
+        },
+            { threshold: 1 }
+        )
+        if (bunnerRef.current) observer.observe(bunnerRef.current)
+        return () => observer.disconnect();
+    }, [])
 
     useEffect(() => {
         isParagraphVisible(true);
@@ -79,12 +121,16 @@ const AllSpecialists = () => {
                     </div>
                 })}
             </div>
-            <div className={styles.banner}>
-                <h2>Хочете зв&apos;язатися з кимось із наших спеціалістів?</h2>
-                <svg height="50px" viewBox="75 110 370 300" width="60px" className={styles.arrow}>
-                    <path d="M322.7,128.4L423,233.4c6,5.8,9,13.7,9,22.4c0,8.7-3,16.5-9,22.4L322.7,383.6c-11.9,12.5-31.3,12.5-43.2,0  c-11.9-12.5-11.9-32.7,0-45.2l48.2-50.4h-217C93.7,288,80,273.7,80,256c0-17.7,13.7-32,30.6-32h217l-48.2-50.4  c-11.9-12.5-11.9-32.7,0-45.2C291.4,115.9,310.7,115.9,322.7,128.4z" />
-                </svg>
-                <p>
+            <div className={styles.banner} ref={bunnerRef}>
+                <h2 ref={setBannerRef(0)}>Хочете зв&apos;язатися з кимось із наших спеціалістів?</h2>
+                <video
+                    muted
+                    playsInline
+                    ref={videoRef}
+                >
+                    <source src='/doctor_video.mp4' />
+                </video>
+                <p ref={setBannerRef(1)}>
                     телефонуйте на номер клініки
                     <span>
                         <svg height="25" viewBox="0 0 512 512" width="25" className={styles.telephone_icon}>
@@ -95,6 +141,7 @@ const AllSpecialists = () => {
                     </span>
                 </p>
             </div>
+            <div className={styles.expiriment}></div>
         </div>
     )
 }

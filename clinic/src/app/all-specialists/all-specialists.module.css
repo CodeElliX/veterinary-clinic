@@ -148,7 +148,6 @@
 }
 
 .banner {
-    background: linear-gradient(to right, white, rgb(28, 78, 83), white, rgb(28, 78, 83), white, rgb(28, 78, 83), white, rgb(28, 78, 83), white);
     height: 30vh;
     display: inline-flex;
     justify-content: space-around;
@@ -157,6 +156,15 @@
     color: white;
     fill: white;
     font-family: var(--font-marck), cursive;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(57, 123, 164), white, white, rgb(57, 123, 164));
+}
+
+.banner video {
+    height: 100%;
+    width: 30%;
+    outline: 1px solid;
+    background-color: rgb(255, 255, 255);
 }
 
 .banner h2 {
@@ -166,27 +174,8 @@
     background-color: rgba(28, 78, 83, 0.6);
     border-radius: 4px;
     text-shadow: 0.5px 0.5px 0.5px black;
-}
-
-.arrow {
-    fill: white;
-    stroke: rgb(28, 78, 83);
-    animation: moveArrow 1.4s infinite ease-in-out;
-    transform-origin: left center;
-}
-
-@keyframes moveArrow {
-    0% {
-        transform: translateX(0);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
+    transform: translateY(200px);
+    transition: transform 1s ease-in-out;
 }
 
 .banner p {
@@ -201,6 +190,8 @@
     background-color: rgba(28, 78, 83, 0.6);
     border-radius: 4px;
     text-shadow: 0.5px 0.5px 0.5px black;
+    transform: translateY(200px);
+    transition: transform 1s ease-in-out;
 }
 
 .banner span {
@@ -210,18 +201,8 @@
     gap: 10px;
 }
 
-@keyframes moveArrowMobile {
-    0% {
-        transform: rotate(45deg) translateX(0);
-    }
-
-    50% {
-        transform: rotate(45deg) translateX(10px);
-    }
-
-    100% {
-        transform: rotate(45deg) translateX(0);
-    }
+.banner .active_banner {
+    transform: translateY(0);
 }
 
 @media (hover:hover) and (pointer:fine) {
@@ -288,14 +269,6 @@
         width: 90%;
         font-size: 22px;
         background-color: rgba(96, 131, 134, 0.8);
-    }
-
-    .arrow {
-        align-self: flex-start;
-        width: 30px;
-        height: 25px;
-        margin-left: 2%;
-        animation: moveArrowMobile 1.4s infinite ease-in-out;
     }
 
 }
