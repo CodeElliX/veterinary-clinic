@@ -43,17 +43,38 @@ const AllSpecialists = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    bannersElRef.current.forEach((el) => el?.classList.add(styles.active_banner));
+                    if (window.innerWidth > 769) {
+                        bannersElRef.current.forEach((el) =>
+                            el?.classList.add(styles.active_banner)
+                        );
+                    } else {
+                        bannersElRef.current.forEach((el, index) => {
+                            if (!el) return;
+                            el.style.transform = 'translateX(0) translateY(0)';
+                            if (index === 0) {
+                                el.classList.add(styles.active_banner_mobile_left);
+                            } else if (index === 1) {
+                                el.classList.add(styles.active_banner_mobile_right);
+                            }
+                        });
+                    }
                 } else {
-                    bannersElRef.current.forEach((el) => el?.classList.remove(styles.active_banner));
+                    bannersElRef.current.forEach((el) => {
+                        el?.classList.remove(
+                            styles.active_banner,
+                            styles.active_banner_mobile_left,
+                            styles.active_banner_mobile_right
+                        );
+                    });
                 }
-            })
-        },
-            { threshold: 1 }
-        )
-        if (bunnerRef.current) observer.observe(bunnerRef.current)
+            });
+        }, { threshold: 1 });
+
+        if (bunnerRef.current) observer.observe(bunnerRef.current);
+
         return () => observer.disconnect();
-    }, [])
+    }, []);
+
 
     useEffect(() => {
         isParagraphVisible(true);
