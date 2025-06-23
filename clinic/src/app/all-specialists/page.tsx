@@ -43,14 +43,13 @@ const AllSpecialists = () => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    if (window.innerWidth > 769) {
+                    if (window.innerWidth > 768) {
                         bannersElRef.current.forEach((el) =>
                             el?.classList.add(styles.active_banner)
                         );
-                    } else {
+                    } else if (window.innerWidth <= 768) {
                         bannersElRef.current.forEach((el, index) => {
                             if (!el) return;
-                            el.style.transform = 'translateX(0) translateY(0)';
                             if (index === 0) {
                                 el.classList.add(styles.active_banner_mobile_left);
                             } else if (index === 1) {
@@ -68,12 +67,14 @@ const AllSpecialists = () => {
                     });
                 }
             });
-        }, { threshold: 1 });
+        }, { threshold: 0.5 });
 
         if (bunnerRef.current) observer.observe(bunnerRef.current);
 
         return () => observer.disconnect();
     }, []);
+
+
 
 
     useEffect(() => {

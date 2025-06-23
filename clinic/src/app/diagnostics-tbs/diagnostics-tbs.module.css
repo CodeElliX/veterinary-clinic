@@ -277,8 +277,8 @@
 }
 
 .banner {
-    background: linear-gradient(to right, white, rgb(28, 78, 83), white, rgb(28, 78, 83), white, rgb(28, 78, 83), white, rgb(28, 78, 83), white);
     height: 30vh;
+    background: linear-gradient(to right, rgb(145, 212, 220), white, white, white, rgb(145, 212, 220));
     display: inline-flex;
     justify-content: center;
     align-items: center;
