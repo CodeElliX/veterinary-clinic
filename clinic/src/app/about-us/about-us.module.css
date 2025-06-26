@@ -1,5 +1,4 @@
 .wrap {
-    position: relative;
     color: rgb(30, 75, 80);
     background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
 }
@@ -235,7 +234,7 @@
     }
 
     .about__imgs .active {
-        position: absolute;
+        position: fixed;
         object-fit: contain;
         top: 0;
         left: 0;
