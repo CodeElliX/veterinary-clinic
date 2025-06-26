@@ -1,4 +1,5 @@
 .wrap {
+    position: relative;
     color: rgb(30, 75, 80);
     background: linear-gradient(to right, white, rgba(130, 155, 182, 0.5), white, rgba(130, 155, 182, 0.5), white, white, rgba(130, 155, 182, 0.5), white);
 }
@@ -176,7 +177,19 @@
     transition: transform 0.8s ease-in-out;
 }
 
+@keyframes animateRotatePhoto {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 @media (max-width: 434px) {
+
     .wrap img {
         max-width: 100%;
         height: 40vh;
@@ -221,7 +234,26 @@
         max-height: 20%;
     }
 
+    .about__imgs .active {
+        position: absolute;
+        object-fit: contain;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        min-width: 100vw;
+        min-height: 100%;
+        background-color: rgba(7, 7, 7, 0.5);
+
+    }
+
+    .about__imgs .active img {
+        object-fit: contain;
+        border: none;
+        animation: animateRotatePhoto 1s ease-in-out;
+    }
+
     .about__imgs img {
+        transition: all 0.3s ease-in-out;
         border-radius: 4px;
         width: 100%;
         height: 100%;
