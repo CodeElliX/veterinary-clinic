@@ -50,6 +50,7 @@
     height: 370px;
     width: 30vw;
     object-fit: cover;
+    object-position: top;
     z-index: 0;
 }
 

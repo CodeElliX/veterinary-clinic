@@ -93,7 +93,6 @@
 
 .card_back {
     transform: rotateY(180deg);
-    font-style: italic;
     background-color: rgb(225, 239, 240);
 }
 

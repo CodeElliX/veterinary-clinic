@@ -35,20 +35,6 @@ const AboutUs = () => {
         return () => observer.disconnect();
     }, [])
 
-    // useEffect(() => {
-    //     const parentImg = aboutImgsRef.current;
-    //     const handleClick = (e: MouseEvent) => {
-    //         const clickedImg = (e.target as HTMLElement).closest('div');
-    //         if (!clickedImg || !parentImg?.contains(clickedImg)) return;
-    //         parentImg?.querySelectorAll('div').forEach(img => {
-    //             img.classList.remove(styles.active)
-    //         });
-    //         clickedImg.classList.add(styles.active)
-    //     }
-    //     parentImg?.addEventListener("click", handleClick);
-    //     return () => parentImg?.removeEventListener("click", handleClick);
-    // }, [])
-
     useEffect(() => {
         const parentImg = aboutImgsRef.current;
 
