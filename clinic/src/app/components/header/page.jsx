@@ -68,7 +68,7 @@ const Header = () => {
                     </li>
                     <li>
                         <span>Ми у соціальних мережах:</span>
-                        <a href="viber://chat?number=%2B380949173380" rel='noopener noreferrer' className={styles.social_icon}>
+                        <a href="viber://chat?number=%2B380949173380" target='_blank' rel='noopener noreferrer' className={styles.social_icon}>
                             <svg viewBox="0 0 96 96">
                                 <title />
                                 <g>
