@@ -1,0 +1,40 @@
+.sliders_container {
+    height: 50vh;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.sliders {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    overflow: hidden;
+    gap: 20px;
+    animation: scroll 60s linear infinite;
+}
+
+.sliders img {
+    flex-shrink: 0;
+    height: 100%;
+    width: auto;
+    border: 8px solid blueviolet;
+    border-radius: 4px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .sliders_container {
+        height: 30vh;
+    }
+
+}

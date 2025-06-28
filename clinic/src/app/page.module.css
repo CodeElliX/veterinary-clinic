@@ -195,3 +195,57 @@
     }
 
 }
+
+
+
+
+
+
+.textEffectWrapper {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.textEffectWrapper::before,
+.textEffectWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.textEffectWrapper::before {
+  animation: shimmer 5s infinite linear;
+  background: 
+    radial-gradient(circle, var(--spotlight-color), transparent 25%) 0 0 / 25% 25%,
+    radial-gradient(circle, var(--spotlight-color), black 25%) 50% 50% / 12.5% 12.5%;
+  top: -100%;
+  left: -100%;
+  mix-blend-mode: color-dodge;
+  z-index: 3;
+}
+
+.textEffectWrapper::after {
+  backdrop-filter: blur(1px) brightness(90%) contrast(150%);
+  z-index: 4;
+}
+
+.altTextEffectWrapper {
+  --spotlight-color: orange;
+}
+
+.altTextEffectWrapper::after {
+  backdrop-filter: brightness(90%) contrast(150%);
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translate3d(50%, 50%, 0);
+  }
+}
