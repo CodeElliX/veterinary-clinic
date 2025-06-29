@@ -3,6 +3,7 @@ import styles from './sliderCertificates.module.css'
 
 const SliderCertificates = () => {
 
+
     const certificates = [
         '/certificates/certificate1.jpg',
         '/certificates/certificate2.jpg',

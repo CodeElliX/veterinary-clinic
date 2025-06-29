@@ -7,6 +7,7 @@
     min-height: max-content;
     background-image: url('/advantages.jpg');
     background-repeat: no-repeat;
+    box-shadow: inset 0 0 10px 4px rgb(96, 131, 134);
 }
 
 .wrap__years {
@@ -106,7 +107,6 @@
     .wrap {
         min-height: max-content;
         height: 1000px;
-        margin-bottom: 5%;
         border-top: 1px solid rgba(28, 78, 83, 0.3);
         background-size: cover;
         background-position: center;

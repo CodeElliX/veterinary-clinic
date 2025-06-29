@@ -76,11 +76,11 @@ export default function Home() {
       <section className={styles.specialists}>
         <Specialists />
       </section>
-      <section className={`${styles.textEffectWrapper} ${styles.altTextEffectWrapper}`}>
-        <SliderCertificates />
-      </section>
       <section>
         <Advantages />
+      </section>
+      <section>
+        <SliderCertificates />
       </section>
     </div>
   );
