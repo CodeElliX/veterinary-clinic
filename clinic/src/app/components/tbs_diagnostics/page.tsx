@@ -6,7 +6,11 @@ import { useEffect, useRef } from 'react';
 
 const TbsDiagnostics = () => {
 
-    const imgRef = useRef([]);
+    const imgRef = useRef<(HTMLElement | null)[]>([]);
+
+    const setImgRef = (index: number) => (el: HTMLElement | null) => {
+        imgRef.current[index] = el;
+    };
 
     useEffect(() => {
 
@@ -29,9 +33,9 @@ const TbsDiagnostics = () => {
     return (
         <div className={styles.wrap}>
             <div className={styles.photo}>
-                <Image src={'/d_tbs.jpg'} alt='tbs-pathology' width={200} height={200} className={styles.pathology} ref={(el) => imgRef.current[0] = el} />
+                <Image src={'/d_tbs.jpg'} alt='tbs-pathology' width={200} height={200} className={styles.pathology} ref={setImgRef(0)} />
                 <Image src={'/normal_tbs.jpg'} alt='tbs_normal' width={200} height={200} className={styles.normal} />
-                <Image src={'/d_tbs_2.jpg'} alt='tbs-pathology' width={200} height={200} className={styles.pathology_2} ref={(el) => imgRef.current[1] = el} />
+                <Image src={'/d_tbs_2.jpg'} alt='tbs-pathology' width={200} height={200} className={styles.pathology_2} ref={setImgRef(1)} />
             </div>
             <div className={styles.description}>
                 <h2>Діагностика та оцінка дисплазії тазостегнових суглобів</h2>
