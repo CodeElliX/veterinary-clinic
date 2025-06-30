@@ -7,7 +7,7 @@
     min-height: max-content;
     background-image: url('/advantages.jpg');
     background-repeat: no-repeat;
-    box-shadow: inset 0 0 10px 4px rgb(96, 131, 134);
+    box-shadow: inset 0 -10px 10px -5px rgb(96, 131, 134);
 }
 
 .wrap__years {
@@ -21,6 +21,8 @@
 }
 
 .wrap__years h1 {
+    padding: 1%;
+    text-align: center;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -40,6 +42,7 @@
 .wrap__header {
     padding: 1%;
     margin-top: 2%;
+    margin-right: 10px;
     align-self: flex-end;
     font-weight: 900;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
