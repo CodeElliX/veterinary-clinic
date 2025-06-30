@@ -6,12 +6,12 @@ import { useEffect, useRef, useState } from 'react';
 
 const Services = () => {
 
-    const [flippedIndex, setFlippedIndex] = useState(null);
-    const wrapRef = useRef(null);
+    const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
+    const wrapRef = useRef<HTMLDivElement | null>(null);
     const [titleVisible, setTitleVisible] = useState(false);
     const [paragraphVisible, setParagraphVisible] = useState(false);
 
-    const handleCardClick = (index) => {
+    const handleCardClick = (index: number) => {
         const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
         if (isTouchDevice) {
             setFlippedIndex(flippedIndex === index ? null : index);
@@ -35,7 +35,7 @@ const Services = () => {
             { threshold: 0.1 }
         )
 
-        observer.observe(wrapRef.current)
+        if (wrapRef.current) observer.observe(wrapRef.current)
 
         return () => observer.disconnect();
     }, [])
