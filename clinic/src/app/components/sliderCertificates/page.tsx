@@ -5,8 +5,8 @@ import { useEffect, useRef } from 'react'
 
 const SliderCertificates = () => {
 
-    const wrapSlidersRef = useRef(null);
-    const slidersRef = useRef(null);
+    const wrapSlidersRef = useRef<HTMLDivElement | null>(null);
+    const slidersRef = useRef<HTMLDivElement | null>(null);
 
     const certificates = [
         '/certificates/certificate0.jpg',
