@@ -12,13 +12,15 @@ const isMobileDevice = () => {
 const Header = () => {
     const [isClient, setIsClient] = useState(false);
     const [bottomFixation, setBottomFixation] = useState(false);
-    const ulRef = useRef(null);
+    const ulRef = useRef<HTMLUListElement | null>(null);
 
     useEffect(() => {
         setIsClient(true);
         const ulEl = ulRef.current;
-        const handleClick = (e) => {
-            const clickedLi = e.target.closest('li');
+        if (!ulEl) return;
+        const handleClick = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            const clickedLi = target.closest('li');
             if (!clickedLi || !ulEl.contains(clickedLi)) return;
             ulEl.querySelectorAll('li').forEach(li => li.classList.remove(styles.active));
             clickedLi.classList.add(styles.active);
