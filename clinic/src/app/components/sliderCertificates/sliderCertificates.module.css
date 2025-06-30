@@ -20,6 +20,9 @@
     display: flex;
     overflow: hidden;
     gap: 20px;
+}
+
+.sliders.active_slider {
     animation: scroll 60s linear infinite;
 }
 

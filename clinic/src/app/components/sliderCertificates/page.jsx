@@ -1,8 +1,12 @@
+'use client'
 import Image from 'next/image'
 import styles from './sliderCertificates.module.css'
+import { useEffect, useRef } from 'react'
 
 const SliderCertificates = () => {
 
+    const wrapSlidersRef = useRef(null);
+    const slidersRef = useRef(null);
 
     const certificates = [
         '/certificates/certificate1.jpg',
@@ -14,10 +18,28 @@ const SliderCertificates = () => {
         '/certificates/certificate7.jpg',
     ]
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!slidersRef.current) return;
+                if (entry.isIntersecting) {
+                    slidersRef.current.classList.add(styles.active_slider);
+                } else {
+                    slidersRef.current.classList.remove(styles.active_slider);
+                }
+            })
+        },
+            { threshold: 0.5 }
+        )
+        if (wrapSlidersRef.current) observer.observe(wrapSlidersRef.current)
+        return () => observer.disconnect();
+
+    }, [])
+
     return (
-        <div className={styles.wrap}>
+        <div className={styles.wrap} ref={wrapSlidersRef}>
             <div className={styles.sliders_container}>
-                <div className={styles.sliders}>
+                <div className={styles.sliders} ref={slidersRef}>
                     {[...certificates, ...certificates].map((el, i) => {
                         return (
                             <Image src={el} key={i} alt={`certificate${i}`} width={400} height={400} />
