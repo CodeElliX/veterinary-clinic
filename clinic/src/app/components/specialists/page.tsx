@@ -7,8 +7,8 @@ import { specialists } from '../../data/specialistsData';
 
 const Specialists = () => {
 
-    const headerRef = useRef(null);
-    const timeoutRef = useRef(null);
+    const headerRef = useRef<HTMLHeadingElement | null>(null);
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const [isVisible, setIsVisible] = useState(false);
     const [animationKey, setAnimationKey] = useState(0);
     const text = 'Наші спеціалісти:';
@@ -17,6 +17,7 @@ const Specialists = () => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
+                    if (!timeoutRef.current) return;
                     clearTimeout(timeoutRef.current);
                     timeoutRef.current = setTimeout(() => {
                         setAnimationKey(prev => prev + 1);
@@ -34,7 +35,9 @@ const Specialists = () => {
             observer.observe(headerRef.current);
         }
         return () => {
-            clearTimeout(timeoutRef.current);
+            if (timeoutRef.current) {
+                clearTimeout(timeoutRef.current);
+            }
             observer.disconnect();
         };
     }, [])

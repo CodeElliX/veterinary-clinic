@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.tsx", "src/app/contacts/page.jsx", "src/app/components/specialists/page.jsx", "src/app/all-services/page.tsx", "src/app/all-specialists/page.tsx", "src/app/components/tbs_diagnostics/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/page.tsx", "src/app/contacts/page.jsx", "src/app/components/specialists/page.tsx", "src/app/all-services/page.tsx", "src/app/all-specialists/page.tsx", "src/app/components/tbs_diagnostics/page.jsx"],
   "exclude": ["node_modules"]
 }
