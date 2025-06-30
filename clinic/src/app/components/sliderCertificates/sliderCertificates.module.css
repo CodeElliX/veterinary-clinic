@@ -30,8 +30,7 @@
     flex-shrink: 0;
     height: 100%;
     width: auto;
-    border: 8px solid blueviolet;
-    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 @keyframes scroll {

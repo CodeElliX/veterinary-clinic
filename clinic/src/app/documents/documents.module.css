@@ -54,7 +54,7 @@
 }
 
 .count {
-    background-color: rgb(0, 120, 215);
+    background-color: rgba(0, 120, 215, 0.5);
     width: max-content;
     color: white;
     padding: 1% 2%;
@@ -129,7 +129,7 @@
     list-style: none;
     padding: 2%;
     box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
-    border-left: 4px solid rgb(0, 120, 215);
+    border-left: 4px solid rgba(0, 120, 215, 0.5);
 }
 
 .note ul li:nth-child(odd) {

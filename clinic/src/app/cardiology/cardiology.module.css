@@ -180,7 +180,7 @@
     text-align: center;
     padding: 2%;
     box-shadow: 0 0 10px 4px rgba(63, 66, 69, 0.7);
-    border-left: 10px solid rgb(145, 212, 220);
+    border-left: 10px solid rgba(0, 120, 215, 0.5);
 }
 
 .prices {
@@ -235,7 +235,7 @@
 }
 
 @media (max-width: 768px) {
-    
+
     .head p {
         width: 100%;
         padding: 2%;

@@ -89,13 +89,14 @@
     width: max-content;
     padding: 5px;
     border-radius: 10px;
-    background-color: rgb(0, 120, 215);
+    background-color: rgba(0, 120, 215, 0.5);
     color: white;
 }
 
 .menu__list__li ul li {
-    list-style-position: outside;
+    list-style-position: inside;
     list-style-type: "🔹  ";
+    margin-left: 2%;
 }
 
 .menu__list__li p {

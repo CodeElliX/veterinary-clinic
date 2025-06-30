@@ -68,6 +68,20 @@ const Surgery = () => {
                     </div>
                 </div>
             </article>
+            <article className={styles.exotic}>
+                <h2><b>Хірургія без кордонів:</b>
+                    <hr />
+                    від домашніх улюбленців до екзотичних тварин</h2>
+                <div className={styles.exotic_description}>
+                    <Image src={'/sque_o_s.jpg'} width={500} height={500} alt='squirrels' />
+                    <p>
+                        Маючи багаторічний та різноплановий практичний досвід, наші хірурги
+                        успішно провели безліч операцій не лише для звичних домашніх улюбленців,
+                        а й для екзотичних пацієнтів — як малих, так і великих. Серед них — мавпи,
+                        тигри, кенгуру, білки, рептилії та багато інших представників тваринного світу.
+                    </p>
+                </div>
+            </article>
             <article className={styles.anesthesiology}>
                 <div className={styles.anesthesiology__description}>
                     <h2>Анестезія та контроль стану</h2>

@@ -9,6 +9,7 @@ const SliderCertificates = () => {
     const slidersRef = useRef(null);
 
     const certificates = [
+        '/certificates/certificate0.jpg',
         '/certificates/certificate1.jpg',
         '/certificates/certificate2.jpg',
         '/certificates/certificate3.jpg',
@@ -42,7 +43,9 @@ const SliderCertificates = () => {
                 <div className={styles.sliders} ref={slidersRef}>
                     {[...certificates, ...certificates].map((el, i) => {
                         return (
-                            <Image src={el} key={i} alt={`certificate${i}`} width={400} height={400} />
+                            <div key={i} className={styles.imageWrapper}>
+                                <Image src={el} alt={`certificate${i}`} width={400} height={400} />
+                            </div>
                         )
                     })}
                 </div>
