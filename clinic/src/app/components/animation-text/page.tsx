@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 
 const AnimationTopText = () => {
 
-    const spanRef = useRef(null);
-    const timeoutRef = useRef(null);
+    const spanRef = useRef<HTMLDivElement | null>(null);
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
     const bottomText = "Цінуємо кожне життя";
     const [isVisible, setIsVisible] = useState(false);
     const [animationKey, setAnimationKey] = useState(0);
@@ -15,7 +15,7 @@ const AnimationTopText = () => {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    clearTimeout(timeoutRef.current);
+                    if (timeoutRef.current) clearTimeout(timeoutRef.current);
                     timeoutRef.current = setTimeout(() => {
                         setAnimationKey(prev => prev + 1);
                         setIsVisible(true);
@@ -31,7 +31,7 @@ const AnimationTopText = () => {
         }
 
         return () => {
-            clearTimeout(timeoutRef.current);
+            if (timeoutRef.current) clearTimeout(timeoutRef.current);
             observer.disconnect();
         };
 
