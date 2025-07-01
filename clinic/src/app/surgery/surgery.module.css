@@ -131,9 +131,10 @@
 }
 
 .exotic_description img {
-    aspect-ratio: 1/1;
+    width: auto;
     outline: 10px solid rgba(0, 120, 215, 0.5);
-    border-radius: 10px;
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 40%;
 }
 
 .exotic_description p {

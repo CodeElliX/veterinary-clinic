@@ -1,8 +1,9 @@
 "use client";
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './header.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const isMobileDevice = () => {
     if (typeof navigator === 'undefined') return false;
@@ -12,26 +13,10 @@ const isMobileDevice = () => {
 const Header = () => {
     const [isClient, setIsClient] = useState(false);
     const [bottomFixation, setBottomFixation] = useState(false);
-    const ulRef = useRef<HTMLUListElement | null>(null);
+    const pathname = usePathname();
 
     useEffect(() => {
         setIsClient(true);
-        const ulEl = ulRef.current;
-        if (!ulEl) return;
-        const handleClick = (e: MouseEvent) => {
-            const target = e.target as HTMLElement;
-            const clickedLi = target.closest('li');
-            if (!clickedLi || !ulEl.contains(clickedLi)) return;
-            ulEl.querySelectorAll('li').forEach(li => li.classList.remove(styles.active));
-            clickedLi.classList.add(styles.active);
-        }
-        ulEl.addEventListener("click", handleClick);
-        return () => {
-            ulEl.removeEventListener('click', handleClick);
-        }
-    }, [])
-
-    useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 40) {
                 setBottomFixation(true);
@@ -119,11 +104,11 @@ const Header = () => {
             </div>
             <div className={`${styles.header__bottom} ${bottomFixation ? styles.header__bottom_fixed : ""}`}>
                 <Link href='/'><Image src='/logo.png' width={70} height={65} alt='logo' /></Link>
-                <ul ref={ulRef}>
-                    <li><Link href='/'>Головна</Link></li>
-                    <li><Link href='/all-services'>Послуги та Ціни</Link></li>
-                    <li><Link href='/contacts'>Контакти</Link></li>
-                    <li><Link href='/all-specialists'>Лікарі</Link></li>
+                <ul>
+                    <li className={pathname === "/" ? styles.active : ""}><Link href='/'>Головна</Link></li>
+                    <li className={pathname === "/all-services" ? styles.active : ""}><Link href='/all-services'>Послуги та Ціни</Link></li>
+                    <li className={pathname === "/contacts" ? styles.active : ""}><Link href='/contacts'>Контакти</Link></li>
+                    <li className={pathname === "/all-specialists" ? styles.active : ""}><Link href='/all-specialists'>Лікарі</Link></li>
                 </ul>
             </div>
         </>

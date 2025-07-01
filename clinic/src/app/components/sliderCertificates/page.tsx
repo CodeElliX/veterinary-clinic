@@ -17,6 +17,7 @@ const SliderCertificates = () => {
         '/certificates/certificate5.jpg',
         '/certificates/certificate6.jpg',
         '/certificates/certificate7.jpg',
+        '/certificates/certificate8.jpg',
     ]
 
     useEffect(() => {
