@@ -104,6 +104,7 @@
 
 .exotic h2 {
     display: block;
+    align-self: first baseline;
     width: max-content;
     font-size: 18px;
     width: 40%;
@@ -122,12 +123,32 @@
 }
 
 .exotic_description {
+    position: relative;
     display: flex;
     width: 58%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+}
+
+.sloth_svg {
+    position: absolute;
+    left: 0;
+    top: 30%;
+    width: 500px;
+    height: 500px;
+    fill: rgba(0, 120, 215, 0.5);
+    z-index: -1;
+}
+
+.svg_wrap {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    right: 0;
+    top: 0;
 }
 
 .exotic_description img {
@@ -352,5 +373,19 @@
     .exotic_description img {
         max-width: 100%;
         outline: 5px solid rgba(0, 120, 215, 0.5);
+    }
+
+    .sloth_svg {
+        display: none;
+    }
+
+    .svg_wrap {
+        position: static;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .exotic h2 {
+        align-self: center;
     }
 }
