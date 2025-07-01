@@ -116,7 +116,7 @@ const Footer = () => {
             </article>
             <address className={styles.footer__bottom}>
                 <p>Центр Ветеринарної Медицина на Разумовській © 2025</p>
-                <p>Made with ❤ by <a href="mailto:codeellix@gmail.com">AneleW</a></p>
+                <p>Made with ❤ by <a href="https://t.me/welenaanelew" target="_blank" rel="noopener noreferrer">AneleW</a></p>
             </address>
         </div>
     )
