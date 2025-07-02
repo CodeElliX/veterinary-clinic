@@ -86,7 +86,7 @@
     z-index: 0;
 }
 
-.card img:nth-child(1) {
+.card:nth-child(1) img {
     object-position: top;
 }
 
