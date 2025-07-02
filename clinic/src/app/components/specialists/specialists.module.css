@@ -132,7 +132,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-    
+
     .card:hover .bottom_description {
         opacity: 0;
         transform: translateY(100%);
