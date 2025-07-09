@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 
 const Advantages = () => {
 
-    const cardRef = useRef([]);
+    const cardRef = useRef<(HTMLElement | null)[]>([]);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -59,7 +59,7 @@ const Advantages = () => {
             </div>
             <div className={styles.advantages}>
                 {cardsData.map((el, i) => (
-                    <section className={styles.advantages__card} key={i} ref={(el) => (cardRef.current[i] = el)}>
+                    <section className={styles.advantages__card} key={i} ref={(el) => { cardRef.current[i] = el }}>
                         {el.icon}
                         <h2>{el.title}</h2>
                         <p>
